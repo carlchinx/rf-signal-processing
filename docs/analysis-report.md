@@ -8,7 +8,7 @@ Investigator: Dr. Charles C. Phiri, CITP, Senior IEEE Member, Fellow (ICTAM)*
 
 ## Abstract
 
-This report presents a comprehensive post-doctoral analysis of four 2-port RF bandpass filters
+This report presents a comprehensive analysis of four 2-port RF bandpass filters
 characterised via Touchstone S2P measurements across the 1–4 GHz band.
 The pipeline integrates five complementary analytical frameworks:
 (i) classical frequency-domain diagnostics (insertion loss, return loss, group delay, passivity,
