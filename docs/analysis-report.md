@@ -4,6 +4,8 @@
 *Frequency-Domain Diagnostics · TDA · Bayesian Inference · Machine Learning
 Investigator: Dr. Charles C. Phiri, CITP, Senior IEEE Member, Fellow (ICTAM)*
 
+*Date: 20 March 2026*
+
 ---
 
 ## Abstract
@@ -171,7 +173,7 @@ The Bayesian posterior confirms no credible evidence of active behaviour.
 
 The time-domain impulse response h(t) is recovered from S₂₁(f) via windowed IDFT:
 
-$$h(t) = \mathcal{F}^{-1}\bigl\{S_{21}(f)\cdot w(f)\bigr\}$$
+$$h(t) = \mathcal{F}^{-1}\left\{S_{21}(f)\cdot w(f)\right\}$$
 
 where w(f) is a **Tukey window** (α = 0.15) applied in the frequency domain to suppress
 Gibbs artefacts arising from the finite measurement bandwidth [1 GHz, 4 GHz].
@@ -383,7 +385,7 @@ A complex-Gaussian posterior is fitted to each S₂₁(f) frequency trace, propa
 measurement uncertainty into credible bands on insertion loss and group delay.
 The 95% Highest Density Interval (HDI) at each frequency point provides:
 
-$$P\bigl(S_{21,\mathrm{true}} \in [\mathrm{HDI}_{\mathrm{low}}, \mathrm{HDI}_{\mathrm{high}}]\bigr) = 0.95$$
+$$P\left(S_{21,\mathrm{true}} \in [\mathrm{HDI}_{\mathrm{low}}, \mathrm{HDI}_{\mathrm{high}}]\right) = 0.95$$
 
 **95% HDI scalar summaries** (posterior median with credible interval):
 
