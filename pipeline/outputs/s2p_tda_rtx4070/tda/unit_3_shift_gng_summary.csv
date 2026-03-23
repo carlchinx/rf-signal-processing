@@ -1,0 +1,2 @@
+n_nodes,n_edges,mean_degree,max_degree,n_components,graph_diameter,branch_point_count,cycle_count,largest_component_fraction,mean_edge_length,std_edge_length,quantization_rmse,mean_node_error,error_concentration
+32.0,40.0,2.5,5.0,1.0,16.0,13.0,9.0,1.0,0.46425258948367976,0.33551529872875385,0.3853136130468922,0.9828938411569561,0.06952414173668556

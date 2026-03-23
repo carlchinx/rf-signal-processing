@@ -1,0 +1,253 @@
+{
+  "run_id": "run_12345",
+  "seed": 12345,
+  "python_version": "3.14.3",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "device": "cpu",
+  "dependency_versions": {
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "skrf": "1.11.0",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "ripser": "0.6.14",
+    "persim": "0.3.8",
+    "torch": "2.10.0+cpu",
+    "sklearn": "1.8.0"
+  },
+  "ph_available": true,
+  "input_files": {
+    "Unit_1": {
+      "path": "data\\040401AA.s2p",
+      "sha256": "7c7ee2fabd31176f11e067328515ab545056d8ca5b97dc7afdda5e944a7f8099"
+    },
+    "Unit_2": {
+      "path": "data\\040402AA.s2p",
+      "sha256": "f3a25643516136e3aad8d581497039b4c329ece126256cf2c41bf9872f38407e"
+    },
+    "Unit_3": {
+      "path": "data\\040403AA.s2p",
+      "sha256": "9ce22f0be034b1f214b7a0fcc64ce17899ed91bcadd04d854e3204e073fd9e7f"
+    },
+    "Unit_4": {
+      "path": "data\\040404AA.s2p",
+      "sha256": "cd0276bbe096a74308197a76cb3f53e7c8ea7325025bdb64d5b0db64e3f05d17"
+    }
+  },
+  "config": {
+    "input_files": [
+      "data/040401AA.s2p",
+      "data/040402AA.s2p",
+      "data/040403AA.s2p",
+      "data/040404AA.s2p"
+    ],
+    "output_dir": "outputs/s2p_tda_rtx4070",
+    "seed": 12345,
+    "interpolation": {
+      "method": "magphase_pchip",
+      "n_points": 1530,
+      "grid_mode": "intersection",
+      "custom_start_hz": null,
+      "custom_stop_hz": null
+    },
+    "time_domain": {
+      "target_trace": "S21",
+      "n_fft": 4096,
+      "window_name": "tukey",
+      "window_kwargs": {
+        "alpha": 0.2
+      },
+      "dc_handling": "zero_fill",
+      "hermitian_real_signal": false,
+      "continuous_scale_df": true
+    },
+    "tda": {
+      "complex_traces": [
+        "S11",
+        "S21"
+      ],
+      "shift_scalar": "S21_db",
+      "shift_window": 64,
+      "shift_lag": null,
+      "shift_lag_min": 4,
+      "shift_lag_max": 128,
+      "shift_stride": 1,
+      "max_points": 512,
+      "subsample": "curvature",
+      "voronoi_qhull_options": "Qbb Qc Qz Qx",
+      "voronoi_volume_clip_quantile": 0.95,
+      "gng_steps": 1200,
+      "gng_max_nodes": 48,
+      "gng_lambda": 40,
+      "gng_max_age": 60,
+      "gng_eps_winner": 0.05,
+      "gng_eps_neighbor": 0.006,
+      "gng_alpha": 0.5,
+      "gng_beta": 0.995,
+      "heatmap_bins": 12,
+      "ph_enabled": true,
+      "ph_maxdim": 2,
+      "ph_thresh_quantile": 0.9,
+      "ph_max_points": 256
+    },
+    "vector_fit": {
+      "n_poles_real": 4,
+      "n_poles_cmplx": 8,
+      "fit_constant": true,
+      "fit_proportional": false,
+      "passivity_enforce": true,
+      "passivity_n_samples": 2000
+    },
+    "autoencoder": {
+      "enabled": true,
+      "window_size": 64,
+      "stride": 8,
+      "latent_dim": 16,
+      "hidden_dim": 256,
+      "batch_size": 256,
+      "epochs": 80,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "noise_std": 0.01,
+      "num_workers": 0,
+      "compile_model": false
+    },
+    "inverse": {
+      "enabled": true,
+      "n_synthetic_per_unit": 500,
+      "target_latent_dim": 12,
+      "batch_size": 256,
+      "epochs": 120,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "hidden_dim": 256,
+      "pole_real_sigma": 0.08,
+      "pole_imag_sigma": 0.08,
+      "residue_sigma": 0.1,
+      "constant_sigma": 0.05,
+      "proportional_sigma": 0.02,
+      "passivity_reject_tol": 0.5,
+      "compile_model": false
+    },
+    "bayes": {
+      "enabled": true,
+      "engine": "numpy_gaussian",
+      "likelihood": "complex_gaussian",
+      "n_draws": 400,
+      "cred_mass": 0.94,
+      "n_ppc_samples": 50,
+      "latent": "savgol_smooth",
+      "smooth_window": 21,
+      "smooth_polyorder": 3,
+      "ph_posterior_n_draws": 80
+    }
+  },
+  "units": [
+    "Unit 1",
+    "Unit 2",
+    "Unit 3",
+    "Unit 4"
+  ],
+  "ingestion_diagnostics": [
+    {
+      "unit": "040401AA",
+      "n_points": 1530,
+      "freq_min_hz": 1000000000.0,
+      "freq_max_hz": 4000000000.0,
+      "df_mean_hz": 1962066.7102681492,
+      "df_std_hz": 1.8163709148409154e-07,
+      "df_max_deviation_hz": 3.4831464290618896e-07,
+      "reciprocity_max": 0.0025537644770310796,
+      "touchstone_version": "1.1",
+      "freq_unit": "HZ",
+      "parameter": "S",
+      "data_format": "RI",
+      "z0_ohm": "50",
+      "two_port_order": "N11_N21_N12_N22",
+      "two_port_order_source": "v1.1_default"
+    },
+    {
+      "unit": "040402AA",
+      "n_points": 1530,
+      "freq_min_hz": 1000000000.0,
+      "freq_max_hz": 4000000000.0,
+      "df_mean_hz": 1962066.7102681492,
+      "df_std_hz": 1.8163709148409154e-07,
+      "df_max_deviation_hz": 3.4831464290618896e-07,
+      "reciprocity_max": 0.002216184444521674,
+      "touchstone_version": "1.1",
+      "freq_unit": "HZ",
+      "parameter": "S",
+      "data_format": "RI",
+      "z0_ohm": "50",
+      "two_port_order": "N11_N21_N12_N22",
+      "two_port_order_source": "v1.1_default"
+    },
+    {
+      "unit": "040403AA",
+      "n_points": 1530,
+      "freq_min_hz": 1000000000.0,
+      "freq_max_hz": 4000000000.0,
+      "df_mean_hz": 1962066.7102681492,
+      "df_std_hz": 1.8163709148409154e-07,
+      "df_max_deviation_hz": 3.4831464290618896e-07,
+      "reciprocity_max": 0.0022970113844076865,
+      "touchstone_version": "1.1",
+      "freq_unit": "HZ",
+      "parameter": "S",
+      "data_format": "RI",
+      "z0_ohm": "50",
+      "two_port_order": "N11_N21_N12_N22",
+      "two_port_order_source": "v1.1_default"
+    },
+    {
+      "unit": "040404AA",
+      "n_points": 1530,
+      "freq_min_hz": 1000000000.0,
+      "freq_max_hz": 4000000000.0,
+      "df_mean_hz": 1962066.7102681492,
+      "df_std_hz": 1.8163709148409154e-07,
+      "df_max_deviation_hz": 3.4831464290618896e-07,
+      "reciprocity_max": 0.0018873436297036734,
+      "touchstone_version": "1.1",
+      "freq_unit": "HZ",
+      "parameter": "S",
+      "data_format": "RI",
+      "z0_ohm": "50",
+      "two_port_order": "N11_N21_N12_N22",
+      "two_port_order_source": "v1.1_default"
+    }
+  ],
+  "bayesian_noise_sigma": {
+    "040401AA": {
+      "sigma_re_S21": 0.004173728524509344,
+      "sigma_im_S21": 0.004915572240164956,
+      "cred_mass": 0.94,
+      "n_draws": 400
+    },
+    "040402AA": {
+      "sigma_re_S21": 0.004105401738351171,
+      "sigma_im_S21": 0.004554357993091569,
+      "cred_mass": 0.94,
+      "n_draws": 400
+    },
+    "040403AA": {
+      "sigma_re_S21": 0.004181512140947091,
+      "sigma_im_S21": 0.0046626981661663435,
+      "cred_mass": 0.94,
+      "n_draws": 400
+    },
+    "040404AA": {
+      "sigma_re_S21": 0.0042583438209194205,
+      "sigma_im_S21": 0.004572654134183026,
+      "cred_mass": 0.94,
+      "n_draws": 400
+    }
+  },
+  "output_sha256": {
+    "summary_frequency_metrics.csv": "c41a9c6426222a49102c31f71c68b5173f944edaaf9737b6485c39428592e0ef",
+    "ingestion_diagnostics.csv": "54138127d8566be90b842c0e723a1118767de897a15fb07cfe43a57c8aadca71",
+    "interpolation_summary.csv": "be75029956a349c135979fdb8bbc34bb8cef81f528909216f64a90e4aa4a06b1",
+    "ph\\ph_bottleneck_distance_dim1.csv": "8fde683e56bd9696b95380fcce998b7071a576dd80f5886c3a386b3ee723f828"
+  }
+}

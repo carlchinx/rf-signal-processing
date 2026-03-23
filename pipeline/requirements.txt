@@ -1,0 +1,25 @@
+# Core numerics
+numpy>=1.26
+scipy>=1.12
+pandas>=2.2
+
+# RF / signal
+scikit-rf>=1.6
+
+# Machine learning
+scikit-learn>=1.4
+
+# Visualisation
+matplotlib>=3.8
+
+# Utilities
+PyYAML>=6.0
+tqdm>=4.66
+
+# PyTorch — install separately to match your CUDA stack:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+# Selector: https://pytorch.org/get-started/locally/
+
+# Persistent homology (optional — auto-detected at runtime)
+# ripser>=0.6
+# persim>=0.3

@@ -1,0 +1,65 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+
+# ── Large binary outputs ───────────────────────────────────────────────────────
+# PyTorch model checkpoints
+*.pt
+*.pth
+# NumPy binary arrays
+*.npy
+*.npz
+# Synthetic S2P files (2 000 generated files — too large for VCS)
+pipeline/synthetic_data/results/s2p/
+
+# ── Analysis outputs (optional: comment out to track results in VCS) ──────────
+# pipeline/outputs/
+# pipeline/synthetic_data/results/
+
+# ── Measurement data ──────────────────────────────────────────────────────────
+# Raw S2P measurement files (proprietary hardware data)
+pipeline/data/*.s2p
+# Synthetic S2P files are already excluded above
+
+# ── IDE and editor artefacts ───────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── HTML outputs ──────────────────────────────────────────────────────────────
+**/*.html
+
+# ── Test and coverage ──────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Environment and secrets ───────────────────────────────────────────────────
+.env
+.env.*
+*.key

@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install ruff
+        run: pip install "ruff>=0.4"
+
+      - name: Lint
+        run: ruff check pipeline/
+
+  syntax-check:
+    name: Syntax check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install non-torch dependencies
+        run: |
+          pip install \
+            numpy>=1.26 scipy>=1.12 pandas>=2.2 matplotlib>=3.8 \
+            PyYAML>=6.0 scikit-rf>=1.6 scikit-learn>=1.4 tqdm>=4.66
+
+      - name: Compile all scripts
+        run: |
+          python -m py_compile pipeline/s2p_tda_rtx4070.py
+          python -m py_compile pipeline/synthetic_data/generate_synthetic.py
+          python -m py_compile pipeline/synthetic_data/compare_models.py
+          echo "All scripts compiled successfully"
