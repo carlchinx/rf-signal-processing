@@ -173,7 +173,7 @@ The Bayesian posterior confirms no credible evidence of active behaviour.
 
 The time-domain impulse response h(t) is recovered from S₂₁(f) via windowed IDFT:
 
-$$h(t) = \mathcal{F}^{-1}\left\{S_{21}(f)\cdot w(f)\right\}$$
+$$h(t) = \mathcal{F}^{-1}\left\lbrace S_{21}(f)\cdot w(f)\right\rbrace$$
 
 where w(f) is a **Tukey window** (α = 0.15) applied in the frequency domain to suppress
 Gibbs artefacts arising from the finite measurement bandwidth [1 GHz, 4 GHz].
