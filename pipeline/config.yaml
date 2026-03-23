@@ -1,0 +1,77 @@
+input_files:
+  - "data/unit_1.s2p"
+  - "data/unit_2.s2p"
+  - "data/unit_3.s2p"
+  - "data/unit_4.s2p"
+output_dir: "outputs/s2p_tda_rtx4070"
+seed: 12345
+interpolation:
+  method: "magphase_pchip"
+  n_points: 1530
+  grid_mode: "intersection"
+time_domain:
+  target_trace: "S21"
+  n_fft: 4096
+  window_name: "tukey"
+  window_kwargs:
+    alpha: 0.2
+  dc_handling: "zero_fill"
+  hermitian_real_signal: false
+  continuous_scale_df: true
+tda:
+  complex_traces: ["S11", "S21"]
+  shift_scalar: "S21_db"
+  shift_window: 64
+  shift_lag: null
+  shift_lag_min: 4
+  shift_lag_max: 128
+  shift_stride: 1
+  max_points: 512
+  subsample: "curvature"
+  voronoi_qhull_options: "Qbb Qc Qz Qx"
+  voronoi_volume_clip_quantile: 0.95
+  gng_steps: 1200
+  gng_max_nodes: 48
+  gng_lambda: 40
+  gng_max_age: 60
+  gng_eps_winner: 0.05
+  gng_eps_neighbor: 0.006
+  gng_alpha: 0.5
+  gng_beta: 0.995
+  heatmap_bins: 12
+vector_fit:
+  n_poles_real: 4
+  n_poles_cmplx: 8
+  fit_constant: true
+  fit_proportional: false
+  passivity_enforce: true
+  passivity_n_samples: 2000
+autoencoder:
+  enabled: true
+  window_size: 64
+  stride: 8
+  latent_dim: 16
+  hidden_dim: 256
+  batch_size: 256
+  epochs: 80
+  lr: 0.001
+  weight_decay: 0.0001
+  noise_std: 0.01
+  num_workers: 0
+  compile_model: false
+inverse:
+  enabled: true
+  n_synthetic_per_unit: 500
+  target_latent_dim: 12
+  batch_size: 256
+  epochs: 120
+  lr: 0.001
+  weight_decay: 0.0001
+  hidden_dim: 256
+  pole_real_sigma: 0.08
+  pole_imag_sigma: 0.08
+  residue_sigma: 0.10
+  constant_sigma: 0.05
+  proportional_sigma: 0.02
+  passivity_reject_tol: 0.50
+  compile_model: false

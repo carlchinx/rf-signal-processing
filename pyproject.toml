@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "rf-signal-processing"
+version = "1.0.0"
+description = "End-to-end RF S2P analysis: TDA, Bayesian inference, autoencoder, and inverse regressor"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Charles C. Phiri", email = "" },
+]
+keywords = [
+    "rf",
+    "s-parameters",
+    "touchstone",
+    "topology",
+    "machine-learning",
+    "signal-processing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "PyYAML>=6.0",
+    "scikit-rf>=1.6",
+    "scikit-learn>=1.4",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+ph = ["ripser>=0.6", "persim>=0.3"]
+dev = ["ruff>=0.4", "pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.urls]
+Repository = "https://github.com/carlchinx/rf-signal-processing"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = [
+    "E501",   # line too long — enforced at 100 but not an error in long scientific expressions
+    "E741",   # ambiguous variable names (l, O, I) — common in signal-processing maths
+]
+
+[tool.ruff.lint.per-file-ignores]
+"pipeline/s2p_tda_rtx4070.py" = ["F401", "E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

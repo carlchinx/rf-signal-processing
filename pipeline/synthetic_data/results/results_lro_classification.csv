@@ -1,0 +1,57 @@
+model,accuracy,f1_macro,auc_roc,feature_layer,task
+LogReg,1.0,1.0,1.0,rf,binary_cluster
+LinearSVM,1.0,1.0,,rf,binary_cluster
+RBF-SVM,0.75,0.7333333333333334,1.0,rf,binary_cluster
+RandomForest,1.0,1.0,1.0,rf,binary_cluster
+GradBoost,1.0,1.0,1.0,rf,binary_cluster
+k-NN (k=7),1.0,1.0,1.0,rf,binary_cluster
+GaussProcC,1.0,1.0,1.0,rf,binary_cluster
+LogReg,0.75,0.7333333333333334,1.0,tda,binary_cluster
+LinearSVM,0.75,0.7333333333333334,,tda,binary_cluster
+RBF-SVM,0.75,0.7333333333333334,1.0,tda,binary_cluster
+RandomForest,0.5,0.3333333333333333,1.0,tda,binary_cluster
+GradBoost,0.75,0.7333333333333334,1.0,tda,binary_cluster
+k-NN (k=7),1.0,1.0,1.0,tda,binary_cluster
+GaussProcC,1.0,1.0,1.0,tda,binary_cluster
+LogReg,0.75,0.7333333333333334,1.0,ae,binary_cluster
+LinearSVM,0.75,0.7333333333333334,,ae,binary_cluster
+RBF-SVM,0.5,0.3333333333333333,1.0,ae,binary_cluster
+RandomForest,0.75,0.7333333333333334,1.0,ae,binary_cluster
+GradBoost,0.75,0.7333333333333334,0.5,ae,binary_cluster
+k-NN (k=7),1.0,1.0,1.0,ae,binary_cluster
+GaussProcC,1.0,1.0,1.0,ae,binary_cluster
+LogReg,1.0,1.0,1.0,all,binary_cluster
+LinearSVM,1.0,1.0,,all,binary_cluster
+RBF-SVM,1.0,1.0,1.0,all,binary_cluster
+RandomForest,1.0,1.0,1.0,all,binary_cluster
+GradBoost,1.0,1.0,1.0,all,binary_cluster
+k-NN (k=7),1.0,1.0,1.0,all,binary_cluster
+GaussProcC,0.75,0.7333333333333334,0.5,all,binary_cluster
+LogReg,0.75,0.6666666666666666,1.0,rf,dominant_unit_4class
+LinearSVM,0.75,0.6666666666666666,,rf,dominant_unit_4class
+RBF-SVM,0.25,0.1,1.0,rf,dominant_unit_4class
+RandomForest,0.75,0.6666666666666666,1.0,rf,dominant_unit_4class
+GradBoost,1.0,1.0,1.0,rf,dominant_unit_4class
+k-NN (k=7),0.75,0.6666666666666666,1.0,rf,dominant_unit_4class
+GaussProcC,0.75,0.6666666666666666,1.0,rf,dominant_unit_4class
+LogReg,1.0,1.0,1.0,tda,dominant_unit_4class
+LinearSVM,1.0,1.0,,tda,dominant_unit_4class
+RBF-SVM,1.0,1.0,1.0,tda,dominant_unit_4class
+RandomForest,1.0,1.0,1.0,tda,dominant_unit_4class
+GradBoost,1.0,1.0,1.0,tda,dominant_unit_4class
+k-NN (k=7),1.0,1.0,1.0,tda,dominant_unit_4class
+GaussProcC,1.0,1.0,1.0,tda,dominant_unit_4class
+LogReg,1.0,1.0,1.0,ae,dominant_unit_4class
+LinearSVM,1.0,1.0,,ae,dominant_unit_4class
+RBF-SVM,1.0,1.0,1.0,ae,dominant_unit_4class
+RandomForest,1.0,1.0,1.0,ae,dominant_unit_4class
+GradBoost,1.0,1.0,1.0,ae,dominant_unit_4class
+k-NN (k=7),1.0,1.0,1.0,ae,dominant_unit_4class
+GaussProcC,1.0,1.0,1.0,ae,dominant_unit_4class
+LogReg,1.0,1.0,1.0,all,dominant_unit_4class
+LinearSVM,1.0,1.0,,all,dominant_unit_4class
+RBF-SVM,0.75,0.6666666666666666,1.0,all,dominant_unit_4class
+RandomForest,1.0,1.0,1.0,all,dominant_unit_4class
+GradBoost,1.0,1.0,1.0,all,dominant_unit_4class
+k-NN (k=7),1.0,1.0,1.0,all,dominant_unit_4class
+GaussProcC,0.25,0.1,0.5,all,dominant_unit_4class

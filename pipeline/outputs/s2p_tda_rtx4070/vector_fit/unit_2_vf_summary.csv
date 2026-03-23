@@ -1,0 +1,2 @@
+unit,model_order,n_poles_real,n_poles_complex,rms_error,passive_before,passive_after
+Unit 2,20,0,10,0.6551833098116905,False,True
