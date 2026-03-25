@@ -1,4 +1,4 @@
-# Postdoctoral Engineering Specification for a Bayesian Frequency–Time–Topology Pipeline for Four Touchstone S2P Files
+# Engineering Specification for a Bayesian Frequency–Time–Topology Pipeline for Four Touchstone S2P Files
 
 ## Executive summary
 
