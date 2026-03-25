@@ -17,9 +17,15 @@ This work is licensed under the [Creative Commons Attribution 4.0 International 
 You are free to share and adapt this material for any purpose, provided appropriate credit is given, a link to the licence is included, and any changes are indicated.
 
 > **Citation:** If you use this repository, pipeline code, or derived results in your work, please cite as:
->
+> 
 > Phiri, C. C. (2026). *RF Signal Processing Pipeline: Bandpass Filter Characterisation via TDA, Bayesian Inference, and Machine Learning.*
-> GitHub Repository. https://github.com/carlchinx/rf-signal-processing
+> GitHub Repository. [https://github.com/carlchinx/rf-signal-processing](https://github.com/carlchinx/rf-signal-processing)
+
+---
+
+## Statement on Data and Results
+
+The data and results within this repository are shared "as is." They are not intended as advice and do not reflect the views of the author's current or previous employers.
 
 ---
 
