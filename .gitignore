@@ -48,8 +48,7 @@ Thumbs.db
 
 # ── HTML outputs ──────────────────────────────────────────────────────────────
 **/*.html
-!docs/index.html
-!docs/_layouts/*.html
+!docs/**/*.html
 
 # ── Test and coverage ──────────────────────────────────────────────────────────
 .pytest_cache/
