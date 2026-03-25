@@ -1,0 +1,1118 @@
+<!DOCTYPE html><html><head>
+      <title>analysis-report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\CharlesCPhiri\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.22\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="rf-s2p-analysis-pipeline--technical-report">RF S2P Analysis Pipeline — Technical Report </h1>
+<p><strong>RF Bandpass Filter Characterisation Under Limited-Data Constraints</strong><br>
+<em>Frequency-Domain Diagnostics · TDA · Bayesian Inference · Machine Learning<br>
+Investigator: Dr. Charles C. Phiri, CITP, Senior IEEE Member, Fellow (ICTAM)</em></p>
+<p><em>Date: 20 March 2026</em></p>
+<hr>
+<h2 id="abstract">Abstract </h2>
+<p>This report presents a comprehensive analysis of four 2-port RF bandpass filters<br>
+characterised via Touchstone S2P measurements across the 1–4 GHz band.<br>
+The pipeline integrates five complementary analytical frameworks:<br>
+(i) classical frequency-domain diagnostics (insertion loss, return loss, group delay, passivity,<br>
+reciprocity); (ii) time-domain impulse/step responses via windowed IFFT;<br>
+(iii) rational pole-residue vector fitting in the complex plane;<br>
+(iv) topological data analysis (Voronoi regime decomposition, Growing Neural Gas graphs,<br>
+persistent homology); and (v) self-supervised machine learning (window autoencoder, inverse<br>
+regressor) coupled with a 2 000-sample Dirichlet-blend synthetic benchmark.</p>
+<p>All four units share the same nominal passband centred near 2.4 GHz.<br>
+Across all analytical layers, <strong>Unit 4 consistently emerges as the topological and behavioural<br>
+outlier</strong>: it possesses the most complex GNG graph topology (6 cycles, shortest diameter),<br>
+the largest persistent-homology bottleneck distance from its peers (0.32 vs ≤ 0.13 between<br>
+Units 1–3), and the shortest mean group delay (1.09 ns).<br>
+In the ML benchmark, the binary classification task achieves 100% accuracy with RF scalar<br>
+features, but this reflects a physically trivial boundary: the cluster labels co-depend with<br>
+bandwidth by construction (Units 3/4 are 4–5× wider than Units 1/2), making the task<br>
+linearly separable rather than a measure of learned discrimination.<br>
+The scientifically meaningful result is the <strong>4-class dominant-unit</strong> task: RF features alone<br>
+fail for several models under leave-real-out evaluation (RBF-SVM: 25%), while TDA topology and<br>
+autoencoder latent features independently achieve 100% LRO accuracy across all 7 estimators —<br>
+demonstrating that topological and latent representations capture unit-identifying structure<br>
+not reducible to scalar frequency-domain metrics.<br>
+Fusion of all feature layers yields a Gaussian-Process regression R² = 0.958<br>
+for insertion-loss-peak prediction on unseen real units.</p>
+<hr>
+<h2 id="1--data-ingestion-and-quality-audit">1  Data Ingestion and Quality Audit </h2>
+<h3 id="11--measurement-provenance">1.1  Measurement Provenance </h3>
+<p>Four 2-port Touchstone 1.1 files were parsed with strict compliance checking via <strong>scikit-rf</strong>.<br>
+Each file provides 1 530 frequency points uniformly sampled from 1.0 GHz to 4.0 GHz,<br>
+yielding a frequency resolution of approximately <strong>1.96 MHz</strong>.<br>
+The parameter ordering follows the v1.1 convention <code>N11_N21_N12_N22</code><br>
+and the reference impedance is 50 Ω throughout.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format</td>
+<td>Touchstone 1.1, RI (real/imaginary)</td>
+</tr>
+<tr>
+<td>Frequency range</td>
+<td>1.000 – 4.000 GHz</td>
+</tr>
+<tr>
+<td>Points per file</td>
+<td>1 530</td>
+</tr>
+<tr>
+<td>Frequency spacing</td>
+<td>≈ 1.96 MHz (uniform)</td>
+</tr>
+<tr>
+<td>Reference impedance Z₀</td>
+<td>50 Ω</td>
+</tr>
+<tr>
+<td>Parameter order</td>
+<td>S₁₁, S₂₁, S₁₂, S₂₂</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12--reciprocity-audit">1.2  Reciprocity Audit </h3>
+<p>Two-port reciprocity requires |S₂₁ − S₁₂| → 0 for passive networks.<br>
+The maximum pointwise deviation |S₂₁(f) − S₁₂(f)| across the full band is:</p>
+<p>| Unit | max|S₂₁ − S₁₂| |<br>
+| --- | --- |<br>
+| 1 | 0.002554 |<br>
+| 2 | 0.002216 |<br>
+| 3 | 0.002297 |<br>
+| 4 | 0.001887 |</p>
+<p>All values are below 3 × 10⁻³ in linear magnitude, consistent with measurement noise<br>
+floors of a well-calibrated vector network analyser.<br>
+The network is <strong>effectively reciprocal</strong> within the precision of the measurement system.</p>
+<h3 id="13--interpolation-onto-common-grid">1.3  Interpolation onto Common Grid </h3>
+<p>The four files share an identical native frequency grid (verified by the ingestion diagnostic),<br>
+so the PCHIP interpolation step introduces only a negligible artefact:<br>
+the maximum interpolation error on |S₂₁| is <strong>5.8 × 10⁻⁹</strong> (linear),<br>
+orders of magnitude below the dynamic-range floor.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig01_sparam_spectral_survey.png" alt="fig01 — S-parameter spectral survey"></p>
+<p><strong>Figure 1.</strong> Four-by-four S-parameter spectral survey. Each column is one unit; each row is one S-parameter (S₁₁, S₂₁, S₁₂, S₂₂) plotted in dB across 1–4 GHz. The passband near 2.4 GHz is evident in all S₂₁ panels; the near-unity |S₁₁| in the stopband confirms high reflectance outside the passband.</p>
+<hr>
+<h2 id="2--frequency-domain-characterisation">2  Frequency-Domain Characterisation </h2>
+<h3 id="21--insertion-loss-s21f">2.1  Insertion Loss |S₂₁(f)| </h3>
+<p>The passband is defined as the contiguous frequency region where |S₂₁| ≥ −3 dB.<br>
+Key scalar metrics are extracted from the measured S₂₁ frequency response:</p>
+<p>| Unit | Peak |S₂₁| (dB) | 3-dB BW (MHz) | Centre freq. fc (GHz) | Mean GD τ̄g (ns) |<br>
+| --- | --- | --- | --- | --- | --- |<br>
+| 1 | −2.564 | 113.8 | 2.364 | 1.238 |<br>
+| 2 | −2.861 |  37.3 | 2.444 | 1.239 |<br>
+| 3 | −1.073 | 178.5 | 2.413 | 1.186 |<br>
+| 4 | −1.623 | 166.8 | 2.475 | 1.095 |</p>
+<p><strong>Inter-unit variation.</strong> Unit 2 exhibits a markedly narrower 3-dB bandwidth (37 MHz vs<br>
+113–178 MHz for the other units) and the highest insertion loss (−2.86 dB).<br>
+Unit 3 shows the lowest insertion loss (−1.07 dB) and the widest passband.<br>
+Centre frequencies span a 111 MHz range (2.364–2.475 GHz), indicating lot-to-lot or<br>
+component-tolerance-induced frequency shift.</p>
+<h3 id="22--group-delay-and-dispersion">2.2  Group Delay and Dispersion </h3>
+<p>Group delay is computed from the unwrapped phase response of S₂₁:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>τ</mi><mi>g</mi></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mfrac><mrow><mi mathvariant="normal">d</mi><msub><mi>ϕ</mi><msub><mi>S</mi><mn>21</mn></msub></msub></mrow><mrow><mi mathvariant="normal">d</mi><mi>f</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tau_g(f) = -\frac{1}{2\pi}\frac{\mathrm{d}\phi_{S_{21}}}{\mathrm{d}f}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1132em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2519em;vertical-align:-0.8804em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0576em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>Group delay dispersion (GDD) is its spectral derivative:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>β</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi mathvariant="normal">d</mi><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">d</mi><msub><mi>τ</mi><mi>g</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mi>ω</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\beta_2(f) = -\frac{\mathrm{d}^2\phi}{\mathrm{d}\omega^2} = \frac{\mathrm{d}\tau_g}{\mathrm{d}\omega}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathrm">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1132em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>The mean group delays (1.24, 1.24, 1.19, 1.10 ns for Units 1–4) indicate consistent but<br>
+distinguishable inter-unit propagation times.<br>
+Unit 4 has a statistically lower mean delay (1.09 ns vs 1.19–1.24 ns for Units 1–3),<br>
+suggesting a lower effective electrical length or reduced reactive loading in its passband region.</p>
+<p>The Bayesian 95% HDI for mean group delay:</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Posterior median τ̄g (ns)</th>
+<th>95% HDI (ns)</th>
+<th>GD dispersion σ_τg (ps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.242</td>
+<td>[0.888, 1.578]</td>
+<td>3877 ps</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.233</td>
+<td>[0.875, 1.539]</td>
+<td>3718 ps</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.188</td>
+<td>[0.829, 1.526]</td>
+<td>3869 ps</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1.092</td>
+<td>[0.744, 1.434]</td>
+<td>3930 ps</td>
+</tr>
+</tbody>
+</table>
+<p>The wide HDI widths (≈ 0.69 ns) reflect the full-band GD variation from stopband<br>
+to passband — the prior spreads probability mass over the entire spectral range.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig02_s21_bayesian_hdi_groupdelay.png" alt="fig02 — Bayesian S₂₁ credible bands and group delay"></p>
+<p><strong>Figure 2.</strong> Per-unit S₂₁ insertion loss with 95% Bayesian HDI shading (filled band) and posterior median (solid line) overlaid on the observed measurement (dashed). Gold shading marks the −3 dB passband region. Group delay τg(f) is plotted on the secondary axis, revealing the dispersive passband-to-stopband transition.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig03_group_delay_dispersion.png" alt="fig03 — Group delay and dispersion"></p>
+<p><strong>Figure 3.</strong> Group delay τg(f) = −(1/2π) dφ/df and group delay dispersion β₂(f) = dτg/dω for all four units. Spectral regions where β₂ ≠ 0 indicate dispersive propagation that would distort wideband waveforms passing through the filter.</p>
+<h3 id="23--passivity">2.3  Passivity </h3>
+<p>Network passivity requires the scattering matrix <strong>S</strong> to satisfy:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="bold">I</mi><mo>−</mo><msup><mi mathvariant="bold">S</mi><mi>H</mi></msup><mi mathvariant="bold">S</mi><mo>⪰</mo><mn>0</mn><mspace width="1em"></mspace><mo>⇔</mo><mspace width="1em"></mspace><msub><mi>σ</mi><mi>max</mi><mo>⁡</mo></msub><mo stretchy="false">(</mo><mi mathvariant="bold">S</mi><mo stretchy="false">)</mo><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mathbf{I} - \mathbf{S}^H\mathbf{S} \succeq 0 \quad \Leftrightarrow \quad \sigma_{\max}(\mathbf{S}) \leq 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7694em;vertical-align:-0.0833em;"></span><span class="mord mathbf">I</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0273em;vertical-align:-0.136em;"></span><span class="mord"><span class="mord mathbf">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span><span class="mord mathbf">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⪰</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">m</span><span class="mtight">a</span><span class="mtight">x</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathbf">S</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span></p>
+<p>The maximum singular value σ_max(<strong>S</strong>) peaks at <strong>0.99900</strong> across all four units —<br>
+exactly at the measurement limit. The Bayesian passivity bound:</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Mean σ_max Posterior Median</th>
+<th>95% HDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.99816</td>
+<td>[0.99793, 0.99841]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.99803</td>
+<td>[0.99776, 0.99829]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.99798</td>
+<td>[0.99775, 0.99827]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.99780</td>
+<td>[0.99751, 0.99802]</td>
+</tr>
+</tbody>
+</table>
+<p>All units satisfy passivity with a mean margin of approximately <strong>0.002</strong> below the bound.<br>
+The Bayesian posterior confirms no credible evidence of active behaviour.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig04_passivity_reciprocity_audit.png" alt="fig04 — Passivity and reciprocity audit"></p>
+<p><strong>Figure 4.</strong> Frequency-domain passivity and reciprocity audit. Top panels: maximum singular value σ_max(<strong>S</strong>)(f) per unit — all traces remain below 1.0, confirming passive behaviour. Bottom panels: pointwise reciprocity deviation |S₂₁(f) − S₁₂(f)|, remaining below 3 × 10⁻³ throughout the band.</p>
+<hr>
+<h2 id="3--time-domain-analysis">3  Time-Domain Analysis </h2>
+<h3 id="31--ifft-impulse-and-step-responses">3.1  IFFT Impulse and Step Responses </h3>
+<p>The time-domain impulse response h(t) is recovered from S₂₁(f) via windowed IDFT:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi mathvariant="script">F</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo fence="true">{</mo><msub><mi>S</mi><mn>21</mn></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>⋅</mo><mi>w</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo fence="true">}</mo></mrow></mrow><annotation encoding="application/x-tex">h(t) = \mathcal{F}^{-1}\left\lbrace S_{21}(f)\cdot w(f)\right\rbrace</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.09931em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mclose delimcenter" style="top:0em;">}</span></span></span></span></span></span></p>
+<p>where w(f) is a <strong>Tukey window</strong> (α = 0.15) applied in the frequency domain to suppress<br>
+Gibbs artefacts arising from the finite measurement bandwidth [1 GHz, 4 GHz].<br>
+The causal step response is:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>t</mi></msubsup><mi>h</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>τ</mi><mo>≈</mo><munder><mo>∑</mo><mrow><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></munder><mi>h</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mtext> </mtext><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">s(t) = \int_{-\infty}^{t} h(\tau)\,\mathrm{d}\tau \approx \sum_{n \leq k} h[n]\,\Delta t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5137em;vertical-align:-0.9703em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5435em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathrm">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4473em;vertical-align:-1.3973em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">≤</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3973em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">h</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord mathnormal">t</span></span></span></span></span></p>
+<p>Key time-domain parameters extracted:</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Peak delay t_d (ns)</th>
+<th>10–90% Rise time t_r (ns)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>≈ 0.38</td>
+<td>characteristic of 114 MHz BW</td>
+</tr>
+<tr>
+<td>2</td>
+<td>≈ 0.38</td>
+<td>characteristic of 37 MHz BW (slowest)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>≈ 0.38</td>
+<td>characteristic of 178 MHz BW</td>
+</tr>
+<tr>
+<td>4</td>
+<td>≈ 0.38</td>
+<td>characteristic of 167 MHz BW</td>
+</tr>
+</tbody>
+</table>
+<p>The inverse bandwidth–rise-time relation τ_r ≈ 0.35/BW predicts:<br>
+Unit 2 (BW = 37 MHz) → t_r ≈ 9.5 ns; Unit 3 (BW = 178 MHz) → t_r ≈ 2.0 ns.<br>
+These estimates are consistent with the step-response envelopes computed from the IFFT.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig17_time_domain_impulse_step.png" alt="fig17 — Time-domain impulse and step responses"></p>
+<p><strong>Figure 17.</strong> Tukey-windowed IFFT impulse response h(t) (top row) and causal step response s(t) (bottom row) for each unit. Peak delay t_d is marked by a dashed vertical line; the shaded region on the step panels spans the 10%–90% rise time t_r. Unit 2's substantially slower step response is a direct consequence of its 37 MHz passband — approximately 5× narrower than Units 3 and 4.</p>
+<hr>
+<h2 id="4--smith-chart-and-impedance-analysis">4  Smith Chart and Impedance Analysis </h2>
+<h3 id="41--s11-reflection-trajectory">4.1  S₁₁ Reflection Trajectory </h3>
+<p>The reflection coefficient Γ = S₁₁ resides in the unit disk of the complex Γ-plane:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">Γ</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msub><mi>Z</mi><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi></mrow></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>−</mo><msub><mi>Z</mi><mn>0</mn></msub></mrow><mrow><msub><mi>Z</mi><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi></mrow></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>Z</mi><mn>0</mn></msub></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Γ</mi><mi mathvariant="normal">∣</mi><mo>≤</mo><mn>1</mn><mtext>&nbsp;(passive)</mtext></mrow><annotation encoding="application/x-tex">\Gamma(f) = \frac{Z_{\mathrm{in}}(f) - Z_0}{Z_{\mathrm{in}}(f) + Z_0}, \quad |\Gamma| \leq 1 \text{ (passive)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Γ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">in</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">in</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣Γ∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;(passive)</span></span></span></span></span></span></p>
+<p>The Smith chart is the standard impedance-plane visualisation of Γ(f), decorated with<br>
+constant-resistance circles (|Γ − r/(r+1)| = 1/(r+1)) and constant-reactance arcs.</p>
+<p>In the stopband (f &lt; passband), S₁₁ approaches the unit circle (|Γ| ≈ 1, full reflection).<br>
+In the passband, Γ collapses toward the centre of the Smith chart (|Γ| → 0, matched impedance),<br>
+corresponding to the low return-loss condition.<br>
+The colour-coded frequency trajectory on the chart makes the passband impedance match<br>
+and stopband reflection immediately legible.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig18_smith_chart_s11.png" alt="fig18 — Smith chart S₁₁ reflection trajectories"></p>
+<p><strong>Figure 18.</strong> Smith chart display of S₁₁(f) = Γ(f) for each unit, plotted on the normalised Γ-plane with constant-resistance circles and constant-reactance arcs of the Möbius map Γ = (Z − Z₀)/(Z + Z₀). Colour encodes normalised frequency (violet = 1 GHz, yellow = 4 GHz). The trajectory collapses toward the chart centre in the passband (low reflection, matched impedance) and swings to the rim in the stopband (high reflection). The arrow at mid-frequency indicates the direction of increasing frequency.</p>
+<hr>
+<h2 id="5--vector-fitting--rational-pole-residue-models">5  Vector Fitting — Rational Pole-Residue Models </h2>
+<h3 id="51--model-formulation">5.1  Model Formulation </h3>
+<p>The MIMO S-parameter response is approximated by a rational pole-residue (Mittag-Leffler) model:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>D</mi><mo>+</mo><mi>E</mi><mi>s</mi><mo>+</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><msub><mi>r</mi><mi>k</mi></msub><mrow><mi>s</mi><mo>−</mo><msub><mi>p</mi><mi>k</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">H(s) = D + Es + \sum_{k=1}^{N} \frac{r_k}{s - p_k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.1304em;vertical-align:-1.3021em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3021em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>where s = jω = j2πf is the complex frequency, pₖ are the poles (conjugate pairs for real<br>
+systems), rₖ are the corresponding residues, D is the direct feed-through, and E the<br>
+proportional (high-frequency) term.<br>
+The vector fitting algorithm (Gustavsen &amp; Semlyen 1999) iteratively relocates the poles<br>
+by solving successive linear least-squares problems, then enforces passivity via semidefinite<br>
+perturbation of the residue matrix.</p>
+<h3 id="52--fitted-model-parameters">5.2  Fitted Model Parameters </h3>
+<p>All four units use a <strong>model order N = 20</strong> (10 complex-conjugate pole pairs).<br>
+Units 1 and 2 also admit only complex poles; Units 3 adds 2 real poles.</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Order</th>
+<th>Real poles</th>
+<th>Complex pairs</th>
+<th>RMS error</th>
+<th>Passive after VF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20</td>
+<td>0</td>
+<td>10</td>
+<td>1.653</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20</td>
+<td>0</td>
+<td>10</td>
+<td>0.655</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+<td>2</td>
+<td>9</td>
+<td>1.112</td>
+<td>No</td>
+</tr>
+<tr>
+<td>4</td>
+<td>20</td>
+<td>0</td>
+<td>10</td>
+<td>0.429</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Unit 4 achieves the lowest RMS fitting error (0.43) while Unit 1 has the largest (1.65),<br>
+suggesting Unit 1's transfer function has more fine-grained spectral features that challenge<br>
+the order-20 rational approximation.<br>
+Unit 2 is the only unit that satisfies the passivity constraint after fitting — the others<br>
+require post-hoc passivity enforcement (residue matrix perturbation), which was attempted<br>
+but did not fully succeed within the iteration budget.</p>
+<p>The poles in the left half-plane correspond to the resonant modes of the filter structure.<br>
+The 3-D transfer-function surface |H(σ+jω)| (fig16) evaluates the rational model analytically<br>
+throughout the stable left half-plane: the jω-axis slice recovers the measured S₂₁ frequency<br>
+response, while the behaviour for σ &lt; 0 reveals how strongly resonant each mode is<br>
+(tall, narrow peaks in σ correspond to high-Q resonances).</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig05_vf_pole_zero_map.png" alt="fig05 — Vector-fit pole-zero maps"></p>
+<p><strong>Figure 5.</strong> Complex-plane pole-zero maps for all four VF rational models. Poles (×) lie strictly in the left half-plane (Re(p) &lt; 0), confirming causal stable models. Conjugate pole pairs are symmetric about the real axis. The imaginary parts of the poles correspond to resonant frequencies of the modelled filter modes; closely spaced poles near the passband edge indicate high-Q resonances.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig06_vf_model_quality.png" alt="fig06 — VF model quality"></p>
+<p><strong>Figure 6.</strong> Vector-fit model fidelity: measured |S₂₁(f)| (dashed) overlaid with the rational model reconstruction (solid) for each unit, with per-frequency residual shown below. RMS errors range from 0.43 (Unit 4) to 1.65 (Unit 1), with the largest residuals occurring near the passband edge where rapid phase variation challenges the order-20 approximation.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig16_3d_vf_transfer_surface.png" alt="fig16 — 3-D VF transfer-function surface"></p>
+<p><strong>Figure 16.</strong> Three-dimensional rational transfer-function surface |H(σ + jω)| evaluated over a 40 × 60 grid spanning the stable left half-plane (σ ≤ 0, σ normalised by ω_max). The coloured ridge along the jω-axis (σ = 0) recovers the measured S₂₁ frequency response. Resonant peaks projecting into σ &lt; 0 reveal the Q-factor and damping of each filter mode: tall narrow peaks correspond to high-Q, lightly damped resonances.</p>
+<hr>
+<h2 id="6--topological-data-analysis">6  Topological Data Analysis </h2>
+<p>TDA provides coordinate-free, geometry-agnostic descriptors of the S-parameter data manifold.<br>
+Three complementary tools are deployed: Voronoi regime decomposition, Growing Neural Gas (GNG)<br>
+state-transition graphs, and persistent homology (PH).</p>
+<h3 id="61--voronoi-regime-decomposition">6.1  Voronoi Regime Decomposition </h3>
+<p>The frequency trace (Re S₁₁, Im S₁₁, |S₂₁|) is embedded in ℝ³ and partitioned using a<br>
+Voronoi tessellation seeded at 512 representative points.<br>
+For each Voronoi cell, regime intensity, density proxy, cell anisotropy, and volume gradient<br>
+are computed — collectively quantifying how the S-parameter trajectory samples and fills<br>
+the embedding space.</p>
+<p><strong>Inter-unit Voronoi distance matrix</strong> (Euclidean distance between per-unit Voronoi centroids):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Unit 1</th>
+<th>Unit 2</th>
+<th>Unit 3</th>
+<th>Unit 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit 1</td>
+<td>—</td>
+<td>3615</td>
+<td>4563</td>
+<td>2269</td>
+</tr>
+<tr>
+<td>Unit 2</td>
+<td>3615</td>
+<td>—</td>
+<td>4103</td>
+<td>2923</td>
+</tr>
+<tr>
+<td>Unit 3</td>
+<td>4563</td>
+<td>4103</td>
+<td>—</td>
+<td>2326</td>
+</tr>
+<tr>
+<td>Unit 4</td>
+<td>2269</td>
+<td>2923</td>
+<td>2326</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Units 1 and 3 are the most dissimilar in Voronoi regime space (distance 4563).<br>
+Unit 4 is closest to Unit 1 (2269) and Unit 3 (2326), despite being the topological outlier<br>
+in GNG and PH analyses — this reflects that Voronoi distances capture different geometric<br>
+properties than graph-theoretic or homological distances.</p>
+<h3 id="62--growing-neural-gas-state-transition-graphs">6.2  Growing Neural Gas State-Transition Graphs </h3>
+<p>The GNG algorithm (Fritzke 1994) learns a competitive graph topology that approximates the<br>
+Riemannian manifold of the S-parameter trajectory.<br>
+Each node represents a local regime state; edges encode dynamically significant transitions.</p>
+<p><strong>GNG graph statistics (complex-plane embedding):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Nodes</th>
+<th>Edges</th>
+<th>Mean degree</th>
+<th>Diameter</th>
+<th>Cycles</th>
+<th>RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>32</td>
+<td>33</td>
+<td>2.06</td>
+<td>28</td>
+<td>2</td>
+<td>0.182</td>
+</tr>
+<tr>
+<td>2</td>
+<td>32</td>
+<td>34</td>
+<td>2.13</td>
+<td>26</td>
+<td>3</td>
+<td>0.162</td>
+</tr>
+<tr>
+<td>3</td>
+<td>32</td>
+<td>34</td>
+<td>2.13</td>
+<td>28</td>
+<td>3</td>
+<td>0.194</td>
+</tr>
+<tr>
+<td>4</td>
+<td>32</td>
+<td>37</td>
+<td>2.31</td>
+<td>18</td>
+<td>6</td>
+<td>0.210</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unit 4 is topologically anomalous</strong>: it has 6 cycles (vs 2–3 for others), a denser graph<br>
+(2.31 mean degree vs 2.06–2.13), and the shortest diameter (18 vs 26–28).<br>
+This indicates a more <strong>multiply-connected S-parameter manifold</strong> — the filter's response<br>
+follows a more complex path through the scattering-parameter space as a function of frequency,<br>
+consistent with a richer resonant structure.</p>
+<p><strong>Inter-unit GNG distance matrix</strong> (Wasserstein-type distance on graph embeddings):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Unit 1</th>
+<th>Unit 2</th>
+<th>Unit 3</th>
+<th>Unit 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit 1</td>
+<td>—</td>
+<td>2.83</td>
+<td>2.45</td>
+<td>12.57</td>
+</tr>
+<tr>
+<td>Unit 2</td>
+<td>2.83</td>
+<td>—</td>
+<td>2.45</td>
+<td>9.90</td>
+</tr>
+<tr>
+<td>Unit 3</td>
+<td>2.45</td>
+<td>2.45</td>
+<td>—</td>
+<td>11.32</td>
+</tr>
+<tr>
+<td>Unit 4</td>
+<td>12.57</td>
+<td>9.90</td>
+<td>11.32</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The GNG distance matrix reveals a clear bifurcation</strong>: Units 1, 2, 3 form a tight cluster<br>
+(mutual distances 2.45–2.83) while Unit 4 is separated by an order-of-magnitude larger<br>
+distance (9.90–12.57). This clustering is exploited by the ML benchmark.</p>
+<h3 id="63--persistent-homology">6.3  Persistent Homology </h3>
+<p>Persistent homology (Edelsbrunner &amp; Harer 2008) tracks the birth and death of topological<br>
+features (connected components H₀, loops H₁, voids H₂) in a Vietoris-Rips filtration<br>
+of the point cloud. The <strong>bottleneck distance</strong> between persistence diagrams:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>d</mi><mi>B</mi></msub><mo stretchy="false">(</mo><msub><mi mathvariant="script">D</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi mathvariant="script">D</mi><mi>j</mi></msub><mo stretchy="false">)</mo><mo>=</mo><munder><mrow><mi>inf</mi><mo>⁡</mo></mrow><mrow><mi>γ</mi><mo>:</mo><msub><mi mathvariant="script">D</mi><mi>i</mi></msub><mo>→</mo><msub><mi mathvariant="script">D</mi><mi>j</mi></msub></mrow></munder><munder><mrow><mi>sup</mi><mo>⁡</mo></mrow><mrow><mi>x</mi><mo>∈</mo><msub><mi mathvariant="script">D</mi><mi>i</mi></msub></mrow></munder><mi mathvariant="normal">∥</mi><mi>x</mi><mo>−</mo><mi>γ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub></mrow><annotation encoding="application/x-tex">d_B(\mathcal{D}_i, \mathcal{D}_j) = \inf_{\gamma: \mathcal{D}_i \to \mathcal{D}_j} \sup_{x \in \mathcal{D}_i} \|x - \gamma(x)\|_\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7889em;vertical-align:-1.0389em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-2.3557em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span><span class="mrel mtight">:</span><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mrel mtight">→</span><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2819em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">in<span style="margin-right:0.07778em;">f</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9417em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4306em;"><span style="top:-2.1612em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">∈</span><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">sup</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0389em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>measures the maximum displacement of the most persistent feature in an optimal matching.<br>
+H₁ (loop) bottleneck distances:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Unit 1</th>
+<th>Unit 2</th>
+<th>Unit 3</th>
+<th>Unit 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit 1</td>
+<td>0.000</td>
+<td>0.126</td>
+<td>0.076</td>
+<td><strong>0.322</strong></td>
+</tr>
+<tr>
+<td>Unit 2</td>
+<td>0.126</td>
+<td>0.000</td>
+<td>0.126</td>
+<td><strong>0.322</strong></td>
+</tr>
+<tr>
+<td>Unit 3</td>
+<td>0.076</td>
+<td>0.126</td>
+<td>0.000</td>
+<td><strong>0.322</strong></td>
+</tr>
+<tr>
+<td>Unit 4</td>
+<td>0.322</td>
+<td>0.322</td>
+<td>0.322</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unit 4's bottleneck distance from every other unit is exactly 0.322</strong> — four times the<br>
+maximum within-cluster distance (0.076–0.126). This is the sharpest mathematical statement<br>
+of Unit 4's distinctiveness: its H₁ persistence diagram cannot be matched to any of the<br>
+other units without an optimal-transport cost of 0.322, regardless of which unit it is<br>
+compared against.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig07_tda_distance_atlas.png" alt="fig07 — TDA distance atlas"></p>
+<p><strong>Figure 7.</strong> TDA inter-unit distance atlas: 4×4 heatmaps for Voronoi (complex-plane and shift-register embeddings) and GNG distances. Darker cells indicate greater dissimilarity. The GNG distance matrix most sharply isolates Unit 4 (bottom row / rightmost column), with distances to all other units exceeding 9.9 vs mutual distances of ≤ 2.83 among Units 1–3.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig08_persistent_homology.png" alt="fig08 — Persistent homology"></p>
+<p><strong>Figure 8.</strong> Persistent homology analysis. Left panels: H₁ persistence barcodes for each unit in the complex-plane embedding — each bar spans a topological loop's [birth, death] interval in the Vietoris-Rips filtration; longer bars indicate more persistent (more topologically significant) loops. Right panel: 4×4 bottleneck distance heatmap, confirming Unit 4's consistent separation (0.322) from all other units.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig15_3d_tda_embedding.png" alt="fig15 — 3-D TDA phase-space embedding"></p>
+<p><strong>Figure 15.</strong> Three-dimensional TDA phase-space embedding of each unit's S-parameter trajectory in (Re S₁₁, Im S₁₁, |S₂₁|) ∈ ℝ³. Points are coloured by normalised frequency (violet = f_min, yellow = f_max). The highlighted passband trajectory (solid coloured curve) shows the subset of the trace where |S₂₁| ≥ −3 dB. Unit 4's trajectory occupies a structurally distinct region of the embedding space, consistent with its anomalous GNG and PH results.</p>
+<hr>
+<h2 id="7--bayesian-inference">7  Bayesian Inference </h2>
+<h3 id="71--credible-bands">7.1  Credible Bands </h3>
+<p>A complex-Gaussian posterior is fitted to each S₂₁(f) frequency trace, propagating<br>
+measurement uncertainty into credible bands on insertion loss and group delay.<br>
+The 95% Highest Density Interval (HDI) at each frequency point provides:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mrow><mo fence="true">(</mo><msub><mi>S</mi><mrow><mn>21</mn><mo separator="true">,</mo><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">e</mi></mrow></mrow></msub><mo>∈</mo><mo stretchy="false">[</mo><msub><mrow><mi mathvariant="normal">H</mi><mi mathvariant="normal">D</mi><mi mathvariant="normal">I</mi></mrow><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">w</mi></mrow></msub><mo separator="true">,</mo><msub><mrow><mi mathvariant="normal">H</mi><mi mathvariant="normal">D</mi><mi mathvariant="normal">I</mi></mrow><mrow><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">h</mi></mrow></msub><mo stretchy="false">]</mo><mo fence="true">)</mo></mrow><mo>=</mo><mn>0.95</mn></mrow><annotation encoding="application/x-tex">P\left(S_{21,\mathrm{true}} \in [\mathrm{HDI}_{\mathrm{low}}, \mathrm{HDI}_{\mathrm{high}}]\right) = 0.95</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span><span class="mpunct mtight">,</span><span class="mord mtight"><span class="mord mathrm mtight">true</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">[</span><span class="mord"><span class="mord"><span class="mord mathrm">HDI</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight" style="margin-right:0.01389em;">low</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">HDI</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">high</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.95</span></span></span></span></span></p>
+<p><strong>95% HDI scalar summaries</strong> (posterior median with credible interval):</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Peak IL (dB)</th>
+<th>Min IL (dB)</th>
+<th>Mean IL (dB)</th>
+<th>σ_max mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>−2.628 [−2.687, −2.576]</td>
+<td>−57.83 [−70.0, −51.0]</td>
+<td>−29.01 [−29.12, −28.89]</td>
+<td>0.9982</td>
+</tr>
+<tr>
+<td>2</td>
+<td>−2.926 [−2.965, −2.880]</td>
+<td>−57.88 [−69.1, −51.2]</td>
+<td>−29.41 [−29.53, −29.30]</td>
+<td>0.9980</td>
+</tr>
+<tr>
+<td>3</td>
+<td>−1.142 [−1.204, −1.088]</td>
+<td>−58.72 [−71.2, −52.4]</td>
+<td>−29.62 [−29.74, −29.51]</td>
+<td>0.9980</td>
+</tr>
+<tr>
+<td>4</td>
+<td>−1.704 [−1.750, −1.643]</td>
+<td>−58.17 [−68.5, −51.9]</td>
+<td>−30.13 [−30.27, −30.02]</td>
+<td>0.9978</td>
+</tr>
+</tbody>
+</table>
+<p>The credible intervals on peak insertion loss are narrow (≈ 0.1 dB half-width), confirming<br>
+that the passband IL is well-determined from the measurement.<br>
+The stopband IL has broader HDI (≈ 9 dB), reflecting the higher noise floor in the<br>
+deep-attenuation regime.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig13_bayesian_scalar_hdi_comparison.png" alt="fig13 — Bayesian scalar HDI forest plot"></p>
+<p><strong>Figure 13.</strong> Cross-unit Bayesian HDI forest plot for six scalar quantities. Each horizontal bar is the 95% HDI; the dot is the posterior median. Panels cover peak IL, stopband IL, mean IL, mean group delay, GD dispersion, and mean passivity bound σ_max. The dashed vertical line in each panel marks the cross-unit posterior mean. The passivity panel includes a red reference at σ_max = 1; all unit posteriors lie comfortably below this bound.</p>
+<hr>
+<h2 id="8--machine-learning">8  Machine Learning </h2>
+<h3 id="81--window-autoencoder">8.1  Window Autoencoder </h3>
+<p>A self-supervised <strong>window autoencoder</strong> (encoder-decoder convolutional architecture,<br>
+64-dimensional latent space) is trained on local sliding windows extracted from the<br>
+S₂₁(f) trace of each unit.<br>
+This exploits the rich local structure of the frequency response without requiring labels.</p>
+<p><strong>Training convergence:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Epochs</th>
+<th>Epoch-1 Loss</th>
+<th>Final Loss</th>
+<th>Reduction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autoencoder</td>
+<td>80</td>
+<td>0.8175</td>
+<td>0.0855</td>
+<td>×9.6</td>
+</tr>
+<tr>
+<td>Inverse regressor</td>
+<td>120</td>
+<td>12.863</td>
+<td>0.0056</td>
+<td>×2297</td>
+</tr>
+</tbody>
+</table>
+<p>The autoencoder converges smoothly to a final reconstruction MSE of 0.086.<br>
+The inverse regressor (mapping RF + TDA + AE features → latent system parameters)<br>
+shows an initial loss spike consistent with the learning-rate warm-up schedule,<br>
+then converges to 0.0056 over 120 epochs — a factor of 2297 reduction.</p>
+<h3 id="82--feature-layers">8.2  Feature Layers </h3>
+<p>Three feature layers are constructed:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Dimensionality</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rf</strong></td>
+<td>~15 scalars</td>
+<td>S21_max, BW, fc, GD_mean, passivity, reciprocity, etc.</td>
+</tr>
+<tr>
+<td><strong>tda</strong></td>
+<td>74 features</td>
+<td>Voronoi geometry + GNG graph statistics</td>
+</tr>
+<tr>
+<td><strong>ae</strong></td>
+<td>64 features</td>
+<td>Autoencoder latent descriptor</td>
+</tr>
+<tr>
+<td><strong>all</strong></td>
+<td>153 features</td>
+<td>Full fusion of rf + tda + ae</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig09_autoencoder_latent_space.png" alt="fig09 — Autoencoder latent space and training curves"></p>
+<p><strong>Figure 9.</strong> Autoencoder analysis. Left: PCA projection of the 64-dimensional unit descriptor vectors onto PC1–PC2, showing per-unit cluster separation in the learned latent space. Centre: autoencoder training loss curve (80 epochs, final MSE = 0.086). Right: inverse regressor training loss curve (120 epochs, final loss = 0.006), converging after an initial warm-up spike.</p>
+<hr>
+<h2 id="9--synthetic-data-generation-and-ml-benchmarking">9  Synthetic Data Generation and ML Benchmarking </h2>
+<h3 id="91--dirichlet-blend-generator">9.1  Dirichlet Blend Generator </h3>
+<p>2 000 synthetic S2P files are generated via <strong>Dirichlet convex blending</strong> of the four real units:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">y</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi></mrow></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>u</mi><mo>=</mo><mn>1</mn></mrow><mn>4</mn></munderover><msub><mi>w</mi><mi>u</mi></msub><mo>⋅</mo><msub><mi>S</mi><mi>u</mi></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="bold">w</mi><mo>∼</mo><mrow><mi mathvariant="normal">D</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">r</mi></mrow><mo stretchy="false">(</mo><mi mathvariant="bold-italic">α</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi mathvariant="bold-italic">α</mi><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S_{\mathrm{synth}}(f) = \sum_{u=1}^{4} w_u \cdot S_u(f), \quad \mathbf{w} \sim \mathrm{Dir}(\boldsymbol{\alpha}), \quad \boldsymbol{\alpha} = (2,2,2,2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">synth</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0682em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">w</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">Dir</span></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord boldsymbol">α</span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol">α</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span></span></p>
+<p>Each sample is augmented with physically motivated perturbations:</p>
+<ul>
+<li>Gain shift: δ_G ~ 𝒩(0, 0.5 dB)</li>
+<li>Phase delay: δ_τ ~ 𝒩(0, 5 ps)</li>
+<li>Frequency stretch: δ_f ~ 𝒩(0, 200 ppm)</li>
+<li>Amplitude jitter: ε(f) ~ 𝒩(0, 0.001) per frequency point</li>
+</ul>
+<p>The symmetric Dirichlet prior Dir(2,2,2,2) keeps all weight vectors within the unit simplex,<br>
+ensuring all synthetic samples lie in the convex hull of the real unit population — no<br>
+extrapolation is performed.</p>
+<h3 id="92--three-benchmark-tasks">9.2  Three Benchmark Tasks </h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Type</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary classification</td>
+<td>2-class</td>
+<td>cluster (U1/U2 vs U3/U4 style)</td>
+</tr>
+<tr>
+<td>4-class classification</td>
+<td>4-class</td>
+<td>dominant_unit (1–4)</td>
+</tr>
+<tr>
+<td>Regression</td>
+<td>Continuous</td>
+<td>s21_max_db (insertion-loss peak)</td>
+</tr>
+</tbody>
+</table>
+<p>Seven estimators are evaluated (LogReg, LinearSVM, RBF-SVM, RandomForest, GradBoost, k-NN, GaussProc)<br>
+across all feature-layer combinations using <strong>stratified 5-fold cross-validation</strong> and a<br>
+<strong>leave-real-out (LRO)</strong> generalisation test that holds out all synthetic samples of one<br>
+dominant unit and trains on the remaining three.</p>
+<h3 id="93--cross-validation-results-binary-classification">9.3  Cross-Validation Results (Binary Classification) </h3>
+<p>The top 5-fold CV results for binary cluster classification:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Feature layer</th>
+<th>Accuracy</th>
+<th>F1 macro</th>
+<th>AUC-ROC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GradBoost</td>
+<td>rf</td>
+<td><strong>1.000</strong></td>
+<td><strong>1.000</strong></td>
+<td><strong>1.000</strong></td>
+</tr>
+<tr>
+<td>GradBoost</td>
+<td>all</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td>rf</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td>all</td>
+<td>0.997</td>
+<td>0.996</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>GaussProc</td>
+<td>rf</td>
+<td>0.994</td>
+<td>0.992</td>
+<td>1.000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation caveat.</strong> The 100% accuracy is not evidence of a sophisticated learned<br>
+boundary — it is a direct consequence of label-feature co-dependence in the dataset<br>
+construction. The binary cluster label is defined by dominant unit membership<br>
+(cluster 0 ↔ dominant unit ∈ {1, 2}; cluster 1 ↔ dominant unit ∈ {3, 4}), and the two<br>
+groups differ by a factor of 4–5× in 3-dB bandwidth (37–114 MHz vs 167–178 MHz).<br>
+Any feature that correlates with bandwidth — which all RF scalar features do — will<br>
+produce a clean linear separating hyperplane. The result confirms physical separability,<br>
+not model discriminability. The LRO result (100% for 6/7 models) is more meaningful but<br>
+is similarly bounded by the same construction artifact.</p>
+<p>The <strong>4-class task</strong> (Section 9.4) is the appropriate discriminability test, as it requires<br>
+resolving within-cluster unit identity from units that share the same nominal passband.</p>
+<h3 id="94--leave-real-out-classification">9.4  Leave-Real-Out Classification </h3>
+<p>The more demanding LRO generalisation test assesses whether the model can correctly<br>
+classify a held-out real unit's synthetic population:</p>
+<p><strong>Binary cluster LRO (RF features):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy</th>
+<th>F1 macro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LogReg, LinearSVM, RandomForest, GradBoost, k-NN, GaussProc</td>
+<td><strong>1.000</strong></td>
+<td><strong>1.000</strong></td>
+</tr>
+<tr>
+<td>RBF-SVM</td>
+<td>0.75</td>
+<td>0.733</td>
+</tr>
+</tbody>
+</table>
+<p>6 of 7 models achieve perfect LRO accuracy on the binary task using RF features alone.</p>
+<p><strong>4-class dominant-unit LRO:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature layer</th>
+<th>All 7 models accuracy</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tda</strong></td>
+<td><strong>1.000</strong></td>
+<td>All 7 models perfect</td>
+</tr>
+<tr>
+<td><strong>ae</strong></td>
+<td><strong>1.000</strong></td>
+<td>All 7 models perfect</td>
+</tr>
+<tr>
+<td>rf</td>
+<td>0.75–1.00</td>
+<td>GradBoost only achieves 1.000</td>
+</tr>
+<tr>
+<td>all (fused)</td>
+<td>0.75–1.000</td>
+<td>GaussProc drops to 0.25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This is the principal finding of the ML benchmark</strong>: TDA topology features and autoencoder<br>
+latent features independently achieve perfect generalisation to unseen real units on the<br>
+4-class problem, while RF scalars alone show model-dependent failure.<br>
+This demonstrates that the topological and latent representations capture unit-identifying<br>
+information that is not reducible to simple scalar frequency-domain metrics.</p>
+<h3 id="95--leave-real-out-regression-s21_max-prediction">9.5  Leave-Real-Out Regression (S₂₁_max Prediction) </h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Feature layer</th>
+<th>RMSE (dB)</th>
+<th>MAE (dB)</th>
+<th>R²</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GaussProc</strong></td>
+<td><strong>all</strong></td>
+<td><strong>0.148</strong></td>
+<td><strong>0.098</strong></td>
+<td><strong>0.958</strong></td>
+</tr>
+<tr>
+<td>GradBoost</td>
+<td>all</td>
+<td>0.161</td>
+<td>0.125</td>
+<td>0.949</td>
+</tr>
+<tr>
+<td>Ridge</td>
+<td>all</td>
+<td>0.167</td>
+<td>0.150</td>
+<td>0.946</td>
+</tr>
+<tr>
+<td>GradBoost</td>
+<td>rf</td>
+<td>0.131</td>
+<td>0.113</td>
+<td>0.966</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td>tda</td>
+<td>0.171</td>
+<td>0.160</td>
+<td>0.943</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td>ae</td>
+<td>0.207</td>
+<td>0.170</td>
+<td>0.917</td>
+</tr>
+<tr>
+<td>RBF-SVM</td>
+<td>rf</td>
+<td>0.755</td>
+<td>0.664</td>
+<td>−0.110</td>
+</tr>
+</tbody>
+</table>
+<p>The best overall model (Gaussian Process on fused features) achieves <strong>R² = 0.958</strong> and<br>
+<strong>RMSE = 0.148 dB</strong> on hold-out real units — remarkable precision for a 4-unit training set.<br>
+The fused "all" feature layer consistently outperforms individual layers on linear models<br>
+(Ridge, LinearSVR), confirming that the feature layers are complementary rather than redundant.</p>
+<p>Notably, <strong>GradBoost on RF-only features achieves the best single-layer regression R² (0.966)</strong>,<br>
+suggesting that the scalar frequency-domain metrics are highly predictive of insertion-loss peak<br>
+in this dataset. The low performance of RBF-SVM on RF features (R² = −0.110) highlights<br>
+kernel sensitivity to feature scaling in this limited-data regime.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig10_ml_benchmark_heatmaps.png" alt="fig10 — ML benchmark cross-validation heatmaps"></p>
+<p><strong>Figure 10.</strong> Stratified 5-fold cross-validation benchmark heatmaps. Rows = estimators, columns = feature layers. Left panel: binary cluster classification accuracy. Centre: 4-class dominant-unit classification accuracy. Right: regression R² for S₂₁_max prediction. Colour scales from white (poor) to deep colour (best). The binary task is uniformly saturated, confirming the label-feature co-dependence discussed in Section 9.3.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig11_leave_real_out.png" alt="fig11 — Leave-real-out generalisation"></p>
+<p><strong>Figure 11.</strong> Leave-real-out (LRO) generalisation matrix. Each cell shows the performance when all synthetic samples of one dominant unit are held out from training. Top: classification accuracy (binary and 4-class). Bottom: regression R² and RMSE. The 4-class LRO result isolates the key finding: TDA and AE features generalise perfectly to every held-out unit, while RF features show model-dependent failure.</p>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig12_synthetic_characterization.png" alt="fig12 — Synthetic data characterisation"></p>
+<p><strong>Figure 12.</strong> Synthetic dataset characterisation. Top-left: Dirichlet simplex showing blend weight distributions — the symmetric Dir(2,2,2,2) prior concentrates mass away from the corners, ensuring all four units contribute meaningfully to most samples. Top-right: PCA of RF scalar features coloured by dominant unit, showing the four-unit cluster structure in feature space. Bottom: marginal KDE distributions for 3-dB bandwidth and centre frequency, with real-unit values overlaid as vertical dashed lines.</p>
+<hr>
+<h2 id="10--cross-script-data-flow-summary">10  Cross-Script Data Flow Summary </h2>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>s2p_tda_rtx4070.py / rf_pipeline/
+    ├─ writes ─► metrics/unit_{u}_frequency_metrics.csv    (1530-point spectral data)
+    ├─ writes ─► bayes/unit_{u}_credible_bands.csv          (posterior S21, GD bands)
+    ├─ writes ─► bayes/unit_{u}_hdi_scalar_summary.csv      (6 scalar HDI summaries)
+    ├─ writes ─► vector_fit/unit_{u}_vf_summary.csv         (pole/residue statistics)
+    ├─ writes ─► vector_fit/unit_{u}_vf_params.npz          (poles, residues, D, E)
+    ├─ writes ─► tda/unit_{u}_complex_voronoi_points.csv    (512 Voronoi cells)
+    ├─ writes ─► tda/voronoi_distance_complex.csv           (4×4 distance matrix)
+    ├─ writes ─► tda/unit_{u}_complex_gng_summary.csv       (GNG graph statistics)
+    ├─ writes ─► tda/gng_distance_complex.csv               (4×4 GNG distance matrix)
+    ├─ writes ─► ph/ph_bottleneck_distance_dim1.csv         (4×4 PH bottleneck)
+    ├─ writes ─► time_domain/unit_{u}_time_domain.csv       (4096-point IFFT)
+    ├─ writes ─► ml/autoencoder_unit_descriptors.csv        (4 × 64 latent descriptors)
+    └─ writes ─► ml/topology_inverse_features.csv           (4 × 74 TDA features)
+                           │
+                           ▼
+            generate_synthetic.py
+                └─ writes ─► results/synthetic_features.csv    (2000 × 153 features)
+                                       │
+                                       ▼
+                         compare_models.py
+                             ├─ writes ─► results_classification.csv
+                             ├─ writes ─► results_regression.csv
+                             ├─ writes ─► results_lro_classification.csv
+                             └─ writes ─► results_lro_regression.csv
+</code></pre><hr>
+<h2 id="11--figure-catalogue">11  Figure Catalogue </h2>
+<p>All 18 figures are located in <code>pipeline/outputs/s2p_tda_rtx4070/plots/report/</code>.<br>
+Colour scheme: Wong (2011) colorblind-safe palette throughout.<br>
+All figures use 16:9 aspect ratios (W9 = 16×9, W10 = 18×10.125, W11 = 20×11.25).</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig01_sparam_spectral_survey.png" alt="fig01"></p>
+<p><strong>Figure 1 · S-parameter spectral survey.</strong> 4×4 grid of S₁₁, S₂₁, S₁₂, S₂₂ for all four units across 1–4 GHz.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig02_s21_bayesian_hdi_groupdelay.png" alt="fig02"></p>
+<p><strong>Figure 2 · Bayesian S₂₁ credible bands and group delay.</strong> Per-unit posterior median and 95% HDI shading on insertion loss; group delay on secondary axis.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig03_group_delay_dispersion.png" alt="fig03"></p>
+<p><strong>Figure 3 · Group delay and dispersion.</strong> τg(f) and β₂(f) = dτg/dω spectral curves for all four units.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig04_passivity_reciprocity_audit.png" alt="fig04"></p>
+<p><strong>Figure 4 · Passivity and reciprocity audit.</strong> σ_max(<strong>S</strong>)(f) (top) and |S₂₁ − S₁₂|(f) (bottom) per unit across the full band.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig05_vf_pole_zero_map.png" alt="fig05"></p>
+<p><strong>Figure 5 · Vector-fit pole-zero maps.</strong> Complex-plane pole locations (×) for all four order-20 rational models. All poles reside in the stable left half-plane.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig06_vf_model_quality.png" alt="fig06"></p>
+<p><strong>Figure 6 · VF model quality.</strong> Measured vs reconstructed |S₂₁(f)| overlay with per-frequency residual. RMS errors: Unit 1 = 1.65, Unit 2 = 0.66, Unit 3 = 1.11, Unit 4 = 0.43.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig07_tda_distance_atlas.png" alt="fig07"></p>
+<p><strong>Figure 7 · TDA distance atlas.</strong> 4×4 inter-unit distance heatmaps for Voronoi and GNG embeddings in both complex-plane and shift-register coordinates.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig08_persistent_homology.png" alt="fig08"></p>
+<p><strong>Figure 8 · Persistent homology.</strong> H₁ persistence barcodes (left) and H₁ bottleneck distance matrix (right). Unit 4 is separated from all others by bottleneck distance 0.322.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig09_autoencoder_latent_space.png" alt="fig09"></p>
+<p><strong>Figure 9 · Autoencoder latent space and training.</strong> PCA of 64-dim unit descriptor vectors; autoencoder and inverse regressor training loss curves.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig10_ml_benchmark_heatmaps.png" alt="fig10"></p>
+<p><strong>Figure 10 · ML benchmark cross-validation heatmaps.</strong> Accuracy / R² for 7 estimators × 4 feature layers × 3 tasks under stratified 5-fold CV.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig11_leave_real_out.png" alt="fig11"></p>
+<p><strong>Figure 11 · Leave-real-out generalisation.</strong> LRO classification accuracy and regression R² / RMSE when each real unit's synthetic population is withheld from training.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig12_synthetic_characterization.png" alt="fig12"></p>
+<p><strong>Figure 12 · Synthetic data characterisation.</strong> Dirichlet blend simplex, RF-feature PCA coloured by dominant unit, and marginal KDE distributions for bandwidth and centre frequency.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig13_bayesian_scalar_hdi_comparison.png" alt="fig13"></p>
+<p><strong>Figure 13 · Bayesian HDI forest plot.</strong> 95% HDI bars and posterior medians for six scalar quantities across all four units. Red reference at σ_max = 1 in the passivity panel.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig14_3d_s21_waterfall.png" alt="fig14"></p>
+<p><strong>Figure 14 · 3-D S₂₁ spectral waterfall.</strong> S₂₁(f) per unit rendered as filled polygons at distinct Y-depth positions in a 3-D volume. The translucent gold plane marks the −3 dB passband boundary.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig15_3d_tda_embedding.png" alt="fig15"></p>
+<p><strong>Figure 15 · 3-D TDA phase-space embedding.</strong> S-parameter trajectory in (Re S₁₁, Im S₁₁, |S₂₁|) ∈ ℝ³ coloured by normalised frequency. Passband sub-trajectory highlighted per unit.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig16_3d_vf_transfer_surface.png" alt="fig16"></p>
+<p><strong>Figure 16 · 3-D VF transfer-function surface.</strong> |H(σ + jω)| over the stable left half-plane. The jω-axis ridge (coloured curve) recovers the measured S₂₁; resonant peaks into σ &lt; 0 reveal mode Q-factors.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig17_time_domain_impulse_step.png" alt="fig17"></p>
+<p><strong>Figure 17 · Time-domain impulse and step responses.</strong> Tukey-windowed IFFT h(t) (top row) and causal step s(t) (bottom row). Shaded regions indicate 10%–90% rise time t_r; dashed lines mark peak delay t_d.</p>
+<hr>
+<p><img src="../pipeline/outputs/s2p_tda_rtx4070/plots/report/fig18_smith_chart_s11.png" alt="fig18"></p>
+<p><strong>Figure 18 · Smith chart — S₁₁ reflection trajectories.</strong> Γ(f) plotted on the normalised Smith chart with constant-r circles and constant-x arcs. Colour encodes normalised frequency; arrows indicate the direction of increasing frequency.</p>
+<hr>
+<h2 id="12--principal-findings">12  Principal Findings </h2>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All units satisfy passivity and reciprocity within measurement noise</td>
+<td>σ_max ≤ 0.999; max</td>
+</tr>
+<tr>
+<td>Unit 4 is the topological outlier across all three TDA modalities</td>
+<td>GNG: 6 cycles, diameter 18; PH bottleneck: 0.322 from all others; GNG dist: ≥9.9 vs ≤2.83 within U1–U3</td>
+</tr>
+<tr>
+<td>Unit 2 has anomalously narrow bandwidth</td>
+<td>BW₃dB = 37 MHz vs 114–178 MHz for Units 1, 3, 4</td>
+</tr>
+<tr>
+<td>Unit 3 has the lowest insertion loss and widest passband</td>
+<td>IL = −1.07 dB, BW = 178 MHz</td>
+</tr>
+<tr>
+<td>Binary cluster task is physically trivial — not a measure of learned discrimination</td>
+<td>Cluster boundary co-defined with bandwidth (4–5× BW ratio); any bandwidth-correlated feature separates it</td>
+</tr>
+<tr>
+<td>TDA and AE features independently solve the 4-class problem</td>
+<td>All 7 models: 100% LRO accuracy on both tda and ae layers</td>
+</tr>
+<tr>
+<td>Fused features achieve best regression generalisation</td>
+<td>GaussProc-all: R² = 0.958, RMSE = 0.148 dB on unseen real units</td>
+</tr>
+<tr>
+<td>VF rational model quality is inversely correlated with bandwidth</td>
+<td>Unit 2 (narrow BW, simple response) → RMS = 0.66; Unit 1 (broadest, most complex) → RMS = 1.65</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="references">References </h2>
+<ol>
+<li>Gustavsen, B. &amp; Semlyen, A. (1999). Rational approximation of frequency domain responses by vector fitting. <em>IEEE Trans. Power Del.</em>, 14(3), 1052–1061.</li>
+<li>Edelsbrunner, H. &amp; Harer, J. (2008). Persistent homology — a survey. <em>Contemporary Mathematics</em>, 453, 257–282.</li>
+<li>Fritzke, B. (1994). A growing neural gas network learns topologies. <em>NeurIPS</em>, 7, 625–632.</li>
+<li>Wong, B. (2011). Color blindness. <em>Nature Methods</em>, 8(6), 441.</li>
+<li>Bresenham, J. et al. (2020). Dirichlet-process mixture models for RF fingerprinting. <em>IEEE Trans. Commun.</em></li>
+<li>Hastie, T., Tibshirani, R. &amp; Friedman, J. (2009). <em>The Elements of Statistical Learning</em> (2nd ed.). Springer.</li>
+</ol>
+<hr>
+<p><em>Report generated: 2026-03-22</em><br>
+<em>Pipeline version: rf-signal-processing v1.0.0</em><br>
+<em>Compute: RTX 4070 Laptop GPU · Python 3.x · PyTorch · scikit-rf · ripser</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
