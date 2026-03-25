@@ -1,5 +1,6 @@
-title: RF Signal Processing Documentation
-description: Reports, media, and technical artifacts for RF signal processing analysis.
-markdown: kramdown
-kramdown:
-  input: GFM
+title: RF Signal Processing - Documentation
+description: Documentation and media for the RF Signal Processing project.
+baseurl: /rf-signal-processing
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
