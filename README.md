@@ -11,13 +11,12 @@ limited-data constraints.
 **Affiliation:** Independent Researcher / ICTAM Fellow  
 **Date:** March 2026  
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  
-You are free to share and adapt this material for any purpose, provided appropriate credit is given, a link to the licence is included, and any changes are indicated.
+This repository is licensed under the [MIT License](LICENSE).
 
 > **Citation:** If you use this repository, pipeline code, or derived results in your work, please cite as:
-> 
+>
 > Phiri, C. C. (2026). *RF Signal Processing Pipeline: Bandpass Filter Characterisation via TDA, Bayesian Inference, and Machine Learning.*
 > GitHub Repository. [https://github.com/carlchinx/rf-signal-processing](https://github.com/carlchinx/rf-signal-processing)
 
@@ -31,7 +30,7 @@ The data and results within this repository are shared "as is." They are not int
 
 ## Architecture
 
-```
+```text
 rf-signal-processing/
 ├── pipeline/                       Real-measurement analysis
 │   ├── s2p_tda_rtx4070.py          Main pipeline (~3 500 lines)
@@ -66,13 +65,13 @@ rf-signal-processing/
 ### 1 · Real-Unit Analysis (`s2p_tda_rtx4070.py`)
 
 | Stage | What it does |
-|---|---|
+| --- | --- |
 | Ingestion | Strict Touchstone 1.1 parsing via scikit-rf; hash-tagged for reproducibility |
 | Interpolation | Unifies four files onto a common frequency grid (PCHIP / mag-phase) |
 | Frequency metrics | Insertion loss, return loss, passivity, reciprocity diagnostics |
 | Time domain | IFFT impulse and step responses with Tukey windowing |
 | Vector fitting | Rational pole-residue models; passivity enforcement |
-| TDA – Voronoi | 3D Voronoi regime analysis on `(Re S₁₁, Im S₁₁, |S₂₁|)` and shift-register clouds |
+| TDA – Voronoi | 3D Voronoi regime analysis on `(Re S₁₁, Im S₁₁, \|S₂₁\|)` and shift-register clouds |
 | TDA – GNG | Growing Neural Gas state-transition graphs; Bottleneck / Wasserstein PH distances |
 | Bayesian | Per-unit credible bands and HDI scalar summaries |
 | Autoencoder | Self-supervised window autoencoder on local RF windows |
@@ -91,7 +90,7 @@ Evaluates six classical estimators across all feature-layer combinations on
 three tasks:
 
 | Task | Type | Target |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Binary classification | `cluster` (Unit-1/2 vs Unit-3/4 style) |
 | 2 | 4-class classification | `dominant_unit` (1–4) |
 | 3 | Regression | `s21_max_db` (insertion-loss peak) |
@@ -155,7 +154,7 @@ All pipeline hyperparameters are declared in [`pipeline/config.yaml`](pipeline/c
 Key sections:
 
 | Section | Controls |
-|---|---|
+| --- | --- |
 | `interpolation` | Frequency-grid unification method and resolution |
 | `tda` | Voronoi and GNG topology parameters |
 | `vector_fit` | Rational model pole/residue counts |
@@ -166,7 +165,7 @@ Key sections:
 
 ## Cross-Script Data Flow
 
-```
+```text
 s2p_tda_rtx4070.py
     └─ writes ──► ml/topology_inverse_features.csv
     └─ writes ──► ml/autoencoder_unit_descriptors.csv
@@ -199,7 +198,7 @@ The pipeline is designed for the four-file regime, not big data.
 ## Dependencies
 
 | Package | Purpose |
-|---|---|
+| --- | --- |
 | `scikit-rf` | Touchstone parsing, vector fitting |
 | `scipy` | Interpolation, signal processing, spatial structures |
 | `numpy`, `pandas` | Numerics and tabular outputs |
