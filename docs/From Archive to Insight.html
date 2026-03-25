@@ -1,0 +1,457 @@
+<!DOCTYPE html><html><head>
+      <title>From Archive to Insight</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\CharlesCPhiri\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.22\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<hr>
+<h1 id="from-archive-to-insight-an-ai-augmented-re-analysis-of-legacy-rf-filter-data">From Archive to Insight: An AI-Augmented Re-Analysis of Legacy RF Filter Data </h1>
+<p><em>What nine years and an AI partner did to RF filter analysis</em></p>
+<p><strong>Bandpass filter under test · April 2017 measurement data · Re-analysed March 2026</strong></p>
+<hr>
+<blockquote>
+<p><em>Decluttering an old drive, I found something unexpected: RF S-parameter analysis from nearly a decade ago, conducted for a client whose identity is immaterial to what follows. What is not immaterial are the two questions the files immediately put to me.</em></p>
+<p><em>The first was a matter of pride. Could I still do this — load the files, perform the standard characterisation, extract the critical figures — without a tutorial, without hesitation, without reaching for half-forgotten notes? I ran the analysis. The fundamentals held. Tick.</em></p>
+<p><em>The second was more interesting. Given everything that has changed since 2017, what else could those files tell me? Not what they told me then — what they could reveal now, with an AI assistant as a research partner rather than a blank script and a deadline.</em></p>
+<p><em>That is the question this article is about.</em></p>
+</blockquote>
+<hr>
+<p><em>Know Thy Data!</em></p>
+<p>The four .s2p files sitting on my hard drive represented measurements characterising 4 bandpass filter units. Each one a two-port S-parameter sweep of a bandpass filter, measured in April 2017. The frequency sweep extended from 57 MHz to 10 GHz, capturing 1,530 frequency points per production unit. The output were standard Touchstone format, .s2p files. They had been sitting on a hard drive, doing nothing, for the better part of a decade.</p>
+<p>Now, RF and baseband engineering are magical for most folks. However, for the purposes of this article, I will stick to the level of detail that a technically literate but non-RF-specialist reader can follow. The goal is to communicate the essence of what the data was, what it showed, and how the analysis evolved — not to teach RF engineering from scratch.</p>
+<blockquote>
+<p><em>To set the context for those not familiar with the RF domain, a bandpass filter is a fundamental RF component that allows signals within a specific frequency range to pass through while attenuating signals outside that range. The S-parameters (scattering parameters) describe how RF energy is transmitted and reflected by the device under test, providing critical information about its performance. S11 (return loss) and S21 (insertion loss) are the key parameters for characterising a filter's performance. S12 and S22 are typically negligible for a passive, reciprocal device like a bandpass filter, and were not the focus of the analysis. A port in this context is a physical interface where the RF signal enters or exits the device. For a two-port device, Port 1 is typically the input and Port 2 is the output. The S-parameters are defined as follows: S11 is the ratio of the reflected signal at Port 1 to the incident signal at Port 1; S21 is the ratio of the transmitted signal at Port 2 to the incident signal at Port 1; S12 is the ratio of the transmitted signal at Port 1 to the incident signal at Port 2; and S22 is the ratio of the reflected signal at Port 2 to the incident signal at Port 2. For a passive, reciprocal device, S12 is equal to S21, and S22 is equal to S11. The data in these files would allow for a comprehensive analysis of the filter's performance across its operating frequency range.</em></p>
+</blockquote>
+<p>The filter's job is deceptively simple: pass signals in one narrow frequency window and obliterate everything else. In 2017, I did what every competent RF engineer does. I processed the files using custom C++ code, plotted insertion loss and return loss, extracted the −3 dB passband, noted the stopband rejection figures, and wrote up a clean summary. Tick. Done. Deliverable submitted, client happy, invoice paid.</p>
+<p>What I did not do — could not easily do, in the time available, with the tools available — was ask the data the deeper questions it was quietly waiting to answer.</p>
+<p>Revisiting those same four files in 2026, equipped with an AI assistant as a research partner, the experience was something qualitatively different. Not just faster. Not just prettier plots. A fundamentally different relationship between practitioner and data — one where the question <em>"what else is in here?"</em> has a practical, same-session answer. That is the substance of this article.</p>
+<p>What follows is an honest account of what happened and what is possible given a set of .s2p files and a capable AI assistant. The short version: <em>the data had far more to say than I asked it to say the first time.</em></p>
+<hr>
+<h2 id="part-one-the-tick--establishing-the-baseline">Part One: The Tick — Establishing the Baseline </h2>
+<p>The discovery of those Touchstone files was, in an era where AI-augmented analysis is becoming the standard, an opportunity to pressure-test the evolution of the RF engineering workflow. Before layering on any advanced modelling capabilities, there is a profound necessity for a sanity check: verifying that the practitioner–AI partnership is built on a substrate of professional fluency. Verified foundational skills are the essential prerequisite.</p>
+<p>The first test I set myself was therefore straightforward. Could I still process the files, extract the standard metrics, and produce a coherent characterisation? This is the bedrock of RF engineering competency — the fluency that separates practitioners from students. I wanted to know if that fluency was still there. This is not a trivial question. It is a necessary skill to ground myself and to verify that I am not just throwing tools at the problem, but that I can still do the basics without them and check if the results make sense.</p>
+<p>As they say, I still got it - the skill is still there. The standard analysis came back without difficulty.</p>
+<blockquote>
+<p><strong>Stage 1 — Standard Characterisation</strong> <em>· <a href="sparam_viewer-sanitised.html">interactive viewer</a></em></p>
+<p>S21 and S11 overlaid across all four units, sweeping 57 MHz to 10 GHz; passband zoom to 3–5 GHz; per-unit comparison cards showing peak insertion loss, centre frequency, −3 dB bandwidth, and stopband rejection at 1 GHz (<em>See sparam_viewer-sanitised.html which contains traces togglable by unit, values readable on hover in GitHub</em>).</p>
+<p>This is the conventional deliverable. Competent, complete, and correct. It answered every question the client asked in 2017.</p>
+</blockquote>
+<p>The findings were exactly what an experienced RF engineer would expect from a well-made bandpass filter. All four units pass a band centred between 3.7 and 4.2 GHz, with peak insertion losses between −0.60 and −0.83 dB. Stopband rejection at 1 GHz exceeded 100 dB across the batch, and return loss in the passband was adequate throughout.</p>
+<p><strong>Key 2017 findings at a glance:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Range across units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Peak S21 (Insertion Loss)</td>
+<td style="text-align:left">−0.60 to −0.83 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">−3 dB bandwidth</td>
+<td style="text-align:left">655–743 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Stopband rejection at 1 GHz</td>
+<td style="text-align:left">−106 to −115 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">Passband return loss (S11)</td>
+<td style="text-align:left">Better than −10 dB (typical)</td>
+</tr>
+</tbody>
+</table>
+<p>This is correct, professional engineering analysis. The standard practice exists because it efficiently extracts the information that matters for most use cases. The skill to do it fluently — to know what to look for, how to interpret the numbers, when a figure is concerning versus expected — is real and hard-won.</p>
+<p>However, the standard practice also leaves the data mostly unread. A Touchstone file contains magnitude and phase at every frequency point — typically 1,500 or more. From that, one can compute group delay, phase linearity, time-domain behaviour, power balance, impedance trajectories, resonator properties, and statistical modes of variation across a production batch. In 2017, extracting any one of those would have required a dedicated script, calibrated expertise, a few hours, and a deliberate decision that the extra effort was warranted.</p>
+<p>More directly: this standard characterisation provides zero diagnostic visibility into manufacturing process drifts or physical failure modes. It satisfies a professional baseline without uncovering the deeper story hidden within the hardware.</p>
+<p>And then came the question that changed the session:</p>
+<blockquote>
+<p><em>"This is good but it is not different from bog-standard analysis. Think of a post-doc researcher extending this visualisation work."</em></p>
+</blockquote>
+<p>That challenge is worth sitting with. The standard analysis is not trivial — it is the skill. Knowing which parameters matter, recognising when a figure is within expectation and when it is not, translating a sweep of numbers into a defensible engineering judgement: that is what the engagement was for, and what the 2017 deliverable represented. The challenge was not to replicate it. It was to go further — to ask the data the questions that the deliverable specification never required, but that the data was always capable of answering. What else is in there? What does the data know that I did not ask it to tell me? What does it say about the physics of the device, the manufacturing process, the real-world performance, and the inter-unit variation that the standard plots do not show? That is the question that set the next stage of analysis in motion.</p>
+<hr>
+<h2 id="part-two-research-level-characterisation-and-the-temporal-dimension">Part Two: Research-Level Characterisation and the Temporal Dimension </h2>
+<p>The first response to that challenge produced six analyses that do not appear in standard RF characterisation reports but sit firmly within the domain of what an experienced practitioner knows about and can interpret. They are not exotic. They are not out of reach. They are simply the next layer of information that the data carries, waiting to be asked. Each one is a standard analysis in the RF research community, but not in the engineering community. The session time from the standard characterisation to the research-level characterisation was under an hour.</p>
+<p>By incorporating temporal and energetic dimensions, this phase transforms our understanding of the device from a black-box attenuator into a complex physical system — a transition vital for modern wideband system design, where the impact on signal integrity depends as much on time-domain behaviour as on frequency-domain rejection.</p>
+<blockquote>
+<p><strong>Stage 2 — Research-Level Characterisation</strong> <em>· <a href="research_viz_sanitised.html">interactive viewer</a></em></p>
+<p>Transmission &amp; group delay dual-axis (A); time-domain impulse response via IFFT (B); power partition: transmitted / reflected / dissipated (C); manufacturing spread from ensemble mean (D); S11 impedance locus on Smith chart (E); S21 phase constellation polar plot (F). (<em>See research_viz_sanitised.html in GitHub for interactive viewer with hover annotations and toggles.</em>)</p>
+<p>All six panels are derived entirely from the original measurement data. No new measurements were required.</p>
+</blockquote>
+<h3 id="group-delay--the-invisible-dimension">Group Delay — The Invisible Dimension </h3>
+<p>The standard S21 plot shows amplitude. It does not show <em>time</em>. Group delay — the negative derivative of the unwrapped phase, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>τ</mi><mi>g</mi></msub><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>d</mi><mi>ϕ</mi><mi mathvariant="normal">/</mi><mi>d</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\tau_g(f) = -d\phi/d\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1132em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal">d</span><span class="mord mathnormal">ϕ</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span> — answers a question the magnitude response never can: how long does each frequency component spend inside the device? This is a critical question for any real-world signal, which is a superposition of many frequencies. A filter that passes the right frequencies but delays them by different amounts will distort the signal, even if the amplitude response looks good.</p>
+<p>For the units under test, mid-band delay runs around 2–3 nanoseconds. At the band edges, it peaks at 5–7 nanoseconds. That variation is not a defect — it is physics. A filter with steep cut-off slopes must store and release energy at the transition frequencies; the time-bandwidth uncertainty principle, expressed in hardware. It means any wideband signal passing through this filter does not emerge intact — the edges of its spectrum arrive detectably later than the centre.</p>
+<h3 id="impulse-response--what-a-perfect-pulse-sees">Impulse Response — What a Perfect Pulse Sees </h3>
+<p>Taking the inverse Fourier transform of the complex S21 response — magnitude and phase together — reconstructs the time-domain behaviour: what the filter's output looks like if its input is a perfect, infinitely short impulse.</p>
+<p>The inverse FFT (IFFT) is a standard numerical method for this transformation. The result is a complex time-domain trace that shows how the filter responds to a delta-function input. The impulse response is the filter's fingerprint in the time domain, revealing its internal energy storage and release dynamics.</p>
+<p>The impulse responses show a consistent structure across all four units: a propagation delay of approximately 3 nanoseconds, followed by a ringing envelope that decays to 10% of its peak at around 12–14 nanoseconds. The ringing is not noise. It is the filter "remembering". Every joule it stores in its resonant cavities to achieve the frequency selectivity it was designed for has to go somewhere when the input stops.</p>
+<p>What this communicates to a non-specialist is immediate. This device is not instantaneous. Feed it something short, and it will ring for over ten times the pulse duration. Every decibel of selectivity at the band edges is paid for in stored energy — a trade-off that becomes immediately visible when viewing the time-domain envelope.</p>
+<h3 id="power-partition--where-every-watt-goes">Power Partition — Where Every Watt Goes </h3>
+<p>Passivity imposes a strict conservation law: at every frequency, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><msub><mi>S</mi><mn>21</mn></msub><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">∣</mi><msub><mi>S</mi><mn>11</mn></msub><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup><mo>+</mo><mtext>dissipation</mtext><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|S_{21}|^2 + |S_{11}|^2 + \text{dissipation} = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">dissipation</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>. Decomposing the measured S-parameters into these three terms produces a power budget that no single-parameter plot conveys. <em>Passivity is a fundamental physical constraint on any real device. The power partition analysis makes it explicit. It shows how the incident power is divided among transmission, reflection, and dissipation at each frequency.</em></p>
+<p>In the passband, the partition runs approximately 57% transmitted, 30% reflected, and 13% dissipated as heat. In the stopband, the picture flips: over 95% of incident power is reflected, with little absorbed. The Smith chart trajectories and the S21 phase constellation polar plot confirm this: rejection is achieved primarily through reflection rather than absorption — a reactive, not absorptive, filter topology.</p>
+<h3 id="manufacturing-deviation--the-production-fingerprint">Manufacturing Deviation — The Production Fingerprint </h3>
+<p>With four units measured, subtracting the ensemble mean S21 from each unit's response removes the shared characteristics and exposes only what makes each unit distinct. The result reveals the band edges as the most variable region, where small dimensional tolerances in the resonator coupling structure produce transmission changes of up to ±10 dB. The core passband, from roughly 3.7 to 4.4 GHz, is where the units agree most consistently, within about ±0.3 dB.</p>
+<p>This is immediately useful intelligence for a production engineer. Not "units vary by 500 MHz," which the standard overlay already shows, but "units vary at the band edges because of edge-coupling tolerances, and the flat core is robust to whatever manufacturing spread you have." The resonator coupling structures are identified as the primary site of manufacturing sensitivity.</p>
+<h3 id="smith-chart--reading-the-impedance-story">Smith Chart — Reading the Impedance Story </h3>
+<p>Plotting S11 as a complex trajectory on the Smith chart rather than as magnitude versus frequency tells the impedance story across the full sweep. In the stopband, the locus hugs the outer rim, indicating near-total reflection. In the passband, the trace spirals inward toward the chart centre, indicating good matching.</p>
+<p>The tightness of the four units' spirals in the passband confirms good impedance consistency across the production batch.</p>
+<hr>
+<h2 id="part-three-deep-characterisation--solving-the-inverse-problem">Part Three: Deep Characterisation — Solving the Inverse Problem </h2>
+<blockquote>
+<p><em>"More visualisations and depth. Deeper analysis."</em></p>
+</blockquote>
+<p>The second push produced nine panels of analysis that move from characterisation into investigation — from measuring what the filter does to understanding <em>why</em>, and from describing the batch to decomposing it. The objective in this phase was to solve the "inverse problem": using the measured S-parameters to extract the internal physical parameters of the filter. This transition — from descriptive engineering to diagnostic inference — is where the depth of analysis begins to directly mitigate latent risks in high-reliability systems.</p>
+<blockquote>
+<p><strong>Stage 3 — Deep Characterisation</strong> <em>· <a href="deep_sanitised.html">interactive viewer</a></em></p>
+<p>Insertion loss &amp; group delay with resonator poles marked (A); resonator pole map with loaded-Q (B); phase linearity residuals (C); Gaussian pulse propagation simulation (D); power partition (E); principal component analysis of inter-unit variation (F); stopband rejection at named wireless bands (G); S11 Smith chart with passband highlight (H); electrical length dispersion (I). (<em>See deep_sanitised.html in GitHub for interactive viewer with hover annotations and toggles.</em>)</p>
+<p>Derived entirely from the original four .s2p files. Session time from raw data to all three stages was under two hours.</p>
+</blockquote>
+<h3 id="resonator-pole-extraction--reading-the-architecture">Resonator Pole Extraction — Reading the Architecture </h3>
+<p>Group delay peaks are not just features of a curve. They are <em>resonator poles</em> — the resonant frequencies of the individual coupled cavities inside the filter. Each peak carries two quantities: the resonant frequency <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">f_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and the loaded quality factor <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">Q_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, computable from the peak height by <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>L</mi></msub><mo>=</mo><mi>π</mi><mo>⋅</mo><msub><mi>f</mi><mn>0</mn></msub><mo>⋅</mo><msub><mi>τ</mi><mtext>peak</mtext></msub></mrow><annotation encoding="application/x-tex">Q_L = \pi \cdot f_0 \cdot \tau_\text{peak}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1132em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord text mtight"><span class="mord mtight">peak</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+<p>A pole describes a resonator's contribution to the filter's overall response. The number of poles, their frequencies, and their Q values reveal the internal architecture of the filter — how many cavities it has, how they are coupled, and how lossy they are.</p>
+<p>For the units under test, this analysis reveals a consistent two-pole structure, with poles appearing at approximately 3.7 GHz and 4.3 GHz and with unit-to-unit variation of about ±200–300 MHz. Loaded Q values run from roughly 59 to 91.</p>
+<p>The key observation is the vertical spread in the pole map: the 500 MHz unit-to-unit centre-frequency variation is not a statistical artefact. It is the combined detuning of two resonator pairs shifting together — a systematic effect, not a random one.</p>
+<h3 id="phase-linearity-residuals--quantifying-waveform-distortion">Phase Linearity Residuals — Quantifying Waveform Distortion </h3>
+<p>A filter with a perfectly linear phase response delays all signal components equally, preserving the waveform. Real bandpass filters are never perfectly linear in phase.</p>
+<p>Fitting a straight line to the unwrapped S21 phase within the passband and plotting the residuals extracts the phase distortion directly. For all four units, the peak-to-peak phase ripple within the passband is 78–92°, with RMS values of 11–13°. This quantification is essential for predicting waveform degradation in modern digital modulation schemes.</p>
+<p>To translate this for a non-specialist: a perfect filter would preserve the shape of any signal within its band. This filter does not — and the residuals say precisely how much it does not, and where the deviation is worst.</p>
+<h3 id="gaussian-pulse-propagation--uncovering-latent-failure">Gaussian Pulse Propagation — Uncovering Latent Failure </h3>
+<p>A 600 MHz-bandwidth Gaussian RF pulse centred at 4 GHz was constructed in the frequency domain and multiplied by the complex S21 of each unit. The inverse FFT of the result gives the predicted output pulse.</p>
+<blockquote>
+<p><strong>Pulse propagation results — all four units</strong></p>
+<p>Units 1–3: <strong>2.95–3.15 ns</strong> delay and <strong>−2.6 to −3.9 dB</strong> insertion loss on the pulse peak.</p>
+<p>Unit 4: <strong>3.30 ns</strong> delay and <strong>−6.53 dB</strong> insertion loss, approximately 3 dB worse than the best unit.</p>
+</blockquote>
+<p>The −6.53 dB figure for Unit 4 represents a latent failure that standard quality assurance would have missed entirely. The CW insertion loss at 4.2 GHz looks acceptable at approximately −0.63 dB, but the filter's offset centre frequency clips the edges of a 600 MHz pulse asymmetrically. A continuous-wave test gives Unit 4 a pass; a wideband pulse test reveals a 3 dB penalty against the rest of the batch. For a pulsed system with a tight link budget, that distinction matters.</p>
+<h3 id="batch-variation--pca-versus-physical-detuning-analysis">Batch Variation — PCA versus Physical Detuning Analysis </h3>
+<p>Quantifying inter-unit variation invites a comparison of two mathematical approaches, each with different diagnostic utility.</p>
+<p><strong>Raw PCA:</strong> Applying singular value decomposition to the 4 × 1,530 matrix of S21 responses decomposes the inter-unit variation into orthogonal modes.</p>
+<blockquote>
+<p><strong>PCA result</strong></p>
+<p><strong>93.4%</strong> of all unit-to-unit variance is captured in a single mode, PC1.</p>
+<p>PC1 is an antisymmetric frequency-shift mode: units shift the passband up or down as a whole.</p>
+<p>PC2, at about 5%, is a bandwidth-ripple mode.</p>
+<p>Units 1 and 4 are the PC1 extremes, while Units 2 and 3 cluster in the middle.</p>
+</blockquote>
+<p>The engineering implication of the PCA result is clear directionally: if you are tightening the production specification, most of the problem sits in a single process parameter — whatever dimension or material property sets the resonant frequency of the cavities.</p>
+<p><strong>However</strong>, PCA is a summary tool, not a diagnostic one. Its lack of physical semantics limits its utility: PC1 conflates bandwidth variation and frequency shifts without separating them into meaningful physical quantities.</p>
+<p><strong>Shift-Fit Registration</strong> is the superior physical model. By explicitly modelling frequency displacement — fitting each unit's response to the ensemble mean after applying a variable frequency offset — we achieve a 58.8% reduction in mean RMSE, dropping from 13.1 dB to 5.4 dB. This residual reduction directly quantifies how much of the observed variation is simply a rigid frequency shift versus a genuine shape change. The resulting detuning values are expressed in the engineer's native units:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Unit</th>
+<th style="text-align:left">Detuning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Unit 1</td>
+<td style="text-align:left">+184 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Unit 2</td>
+<td style="text-align:left">+70 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Unit 3</td>
+<td style="text-align:left">−62 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Unit 4</td>
+<td style="text-align:left">−188 MHz</td>
+</tr>
+</tbody>
+</table>
+<p>This tells a process engineer precisely what to target: not a statistical variance reduction, but a 188 MHz frequency calibration spread in the cavity resonators.</p>
+<h3 id="stopband-rejection-at-named-wireless-bands">Stopband Rejection at Named Wireless Bands </h3>
+<p>Rather than a generic "stopband rejection &gt; 100 dB" figure, interpolating the measured S21 at specific named wireless frequencies produces a coexistence map that is directly legible to a system engineer.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Band</th>
+<th style="text-align:left">Unit 1</th>
+<th style="text-align:left">Unit 2</th>
+<th style="text-align:left">Unit 3</th>
+<th style="text-align:left">Unit 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Cellular 700 MHz</td>
+<td style="text-align:left">−103.5 dB</td>
+<td style="text-align:left">−104.0 dB</td>
+<td style="text-align:left">−102.7 dB</td>
+<td style="text-align:left">−101.1 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">GSM 900 MHz</td>
+<td style="text-align:left">−111.6 dB</td>
+<td style="text-align:left">−112.5 dB</td>
+<td style="text-align:left">−104.6 dB</td>
+<td style="text-align:left">−104.0 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">DCS 1.8 GHz</td>
+<td style="text-align:left">−113.4 dB</td>
+<td style="text-align:left">−105.5 dB</td>
+<td style="text-align:left">−105.6 dB</td>
+<td style="text-align:left">−108.6 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">Wi‑Fi 2.4 GHz</td>
+<td style="text-align:left">−101.0 dB</td>
+<td style="text-align:left">−112.1 dB</td>
+<td style="text-align:left">−111.7 dB</td>
+<td style="text-align:left">−110.0 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">5G NR 5.0 GHz</td>
+<td style="text-align:left">−65.5 dB</td>
+<td style="text-align:left">−64.6 dB</td>
+<td style="text-align:left">−54.2 dB</td>
+<td style="text-align:left">−47.2 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">X-band 7–8 GHz</td>
+<td style="text-align:left">−52 to −73 dB</td>
+<td style="text-align:left">−54 to −72 dB</td>
+<td style="text-align:left">−52 to −76 dB</td>
+<td style="text-align:left">−49 to −71 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">Ku-band 10 GHz</td>
+<td style="text-align:left">−40.3 dB</td>
+<td style="text-align:left">−42.5 dB</td>
+<td style="text-align:left">−41.4 dB</td>
+<td style="text-align:left">−40.3 dB</td>
+</tr>
+</tbody>
+</table>
+<p>The degradation above 5 GHz is not a measurement artefact. It is the filter's harmonic window — a structural feature of coupled-resonator topologies in which partial transmission re-emerges at higher frequencies.</p>
+<h3 id="electrical-length-dispersion--the-speed-of-phase">Electrical Length Dispersion — The Speed of Phase </h3>
+<p>Electrical length — the normalised phase transit time, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∠</mi><msub><mi>S</mi><mn>21</mn></msub><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>2</mn><mi>π</mi><mi>f</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">-\angle S_{21} / (2\pi f)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">∠</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">21</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span></span></span></span> — measures how quickly the filter's phase structure propagates energy at each frequency. A non-dispersive medium would show a flat horizontal line.</p>
+<p>The units under test show a pronounced downward slope across the passband: higher frequencies traverse the structure faster than lower ones. This is anomalous dispersion, and it is consistent with a coupled-resonator topology.</p>
+<hr>
+<h2 id="the-numbers-at-a-glance">The Numbers at a Glance </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Unit 1</th>
+<th style="text-align:left">Unit 2</th>
+<th style="text-align:left">Unit 3</th>
+<th style="text-align:left">Unit 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Centre frequency</td>
+<td style="text-align:left">3.713 GHz</td>
+<td style="text-align:left">3.974 GHz</td>
+<td style="text-align:left">4.072 GHz</td>
+<td style="text-align:left">4.218 GHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Peak S21</td>
+<td style="text-align:left">−0.60 dB</td>
+<td style="text-align:left">−0.62 dB</td>
+<td style="text-align:left">−0.83 dB</td>
+<td style="text-align:left">−0.63 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">−3 dB bandwidth</td>
+<td style="text-align:left">743 MHz</td>
+<td style="text-align:left">657 MHz</td>
+<td style="text-align:left">684 MHz</td>
+<td style="text-align:left">655 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Mid-band group delay</td>
+<td style="text-align:left">~2.6 ns</td>
+<td style="text-align:left">~2.7 ns</td>
+<td style="text-align:left">~3.0 ns</td>
+<td style="text-align:left">~2.7 ns</td>
+</tr>
+<tr>
+<td style="text-align:left">Peak group delay (band edge)</td>
+<td style="text-align:left">~5.3 ns</td>
+<td style="text-align:left">~6.3 ns</td>
+<td style="text-align:left">~6.2 ns</td>
+<td style="text-align:left">~6.6 ns</td>
+</tr>
+<tr>
+<td style="text-align:left">Phase ripple (P-P)</td>
+<td style="text-align:left">87.6°</td>
+<td style="text-align:left">92.5°</td>
+<td style="text-align:left">78.5°</td>
+<td style="text-align:left">84.2°</td>
+</tr>
+<tr>
+<td style="text-align:left">Pulse IL @ 4 GHz</td>
+<td style="text-align:left">−2.95 dB</td>
+<td style="text-align:left">−2.62 dB</td>
+<td style="text-align:left">−3.92 dB</td>
+<td style="text-align:left">−6.53 dB</td>
+</tr>
+<tr>
+<td style="text-align:left">Resonator poles</td>
+<td style="text-align:left">3.55, 4.28 GHz</td>
+<td style="text-align:left">3.71, 4.33 GHz</td>
+<td style="text-align:left">3.85, 4.52 GHz</td>
+<td style="text-align:left">3.71, 4.00 GHz</td>
+</tr>
+<tr>
+<td style="text-align:left">Dominant <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">Q_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> range</td>
+<td style="text-align:left">59–91</td>
+<td style="text-align:left">74–80</td>
+<td style="text-align:left">74–84</td>
+<td style="text-align:left">81–83</td>
+</tr>
+<tr>
+<td style="text-align:left">Passband dissipation</td>
+<td style="text-align:left">~13%</td>
+<td style="text-align:left">~13%</td>
+<td style="text-align:left">~18%</td>
+<td style="text-align:left">~13%</td>
+</tr>
+<tr>
+<td style="text-align:left">Frequency detuning (Shift-Fit)</td>
+<td style="text-align:left">+184 MHz</td>
+<td style="text-align:left">+70 MHz</td>
+<td style="text-align:left">−62 MHz</td>
+<td style="text-align:left">−188 MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">PCA PC1 score</td>
+<td style="text-align:left">−524</td>
+<td style="text-align:left">−213</td>
+<td style="text-align:left">+202</td>
+<td style="text-align:left">+535</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="what-actually-changed--the-economics-of-depth">What Actually Changed — The Economics of Depth </h2>
+<p>The comparison is not simply "fewer outputs then, more outputs now." It is a change in the economics of depth. In 2017, the deep analysis presented here would have required a series of time-consuming project decisions and bespoke scripting. In 2026, it is a frictionless extension of engineering curiosity.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"><strong>2017 — Standard Practice</strong></th>
+<th style="text-align:left"><strong>2026 — AI-Augmented Analysis</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Scope</td>
+<td style="text-align:left">Magnitude vs frequency; 2 parameters; standard deliverable</td>
+<td style="text-align:left">Magnitude, phase, group delay, time domain, power budget, impedance, statistical decomposition</td>
+</tr>
+<tr>
+<td style="text-align:left">Group delay</td>
+<td style="text-align:left">Not computed</td>
+<td style="text-align:left">Computed, smoothed, annotated with resonator pole markers</td>
+</tr>
+<tr>
+<td style="text-align:left">Phase</td>
+<td style="text-align:left">Not examined</td>
+<td style="text-align:left">78–92° P-P residuals quantified per unit</td>
+</tr>
+<tr>
+<td style="text-align:left">Time domain</td>
+<td style="text-align:left">Not performed</td>
+<td style="text-align:left">Impulse response plus realistic pulse simulation</td>
+</tr>
+<tr>
+<td style="text-align:left">Power budget</td>
+<td style="text-align:left">Not performed</td>
+<td style="text-align:left">57% transmitted / 30% reflected / 13% dissipated at mid-band</td>
+</tr>
+<tr>
+<td style="text-align:left">Batch variation</td>
+<td style="text-align:left">Visual range on overlay</td>
+<td style="text-align:left">PCA (93.4%); Shift-Fit Registration (detuning in MHz per unit)</td>
+</tr>
+<tr>
+<td style="text-align:left">Stopband context</td>
+<td style="text-align:left">"Exceeds 100 dB in stopband"</td>
+<td style="text-align:left">Named by wireless band; harmonic window at 5+ GHz quantified</td>
+</tr>
+<tr>
+<td style="text-align:left">Resonator physics</td>
+<td style="text-align:left">Implicit in bandwidth</td>
+<td style="text-align:left">Pole frequencies and loaded Q extracted analytically</td>
+</tr>
+<tr>
+<td style="text-align:left">Session time</td>
+<td style="text-align:left">Several hours, including scripting</td>
+<td style="text-align:left">Under two hours from raw files to all three stages</td>
+</tr>
+<tr>
+<td style="text-align:left">Audience</td>
+<td style="text-align:left">RF specialists only</td>
+<td style="text-align:left">Technical depth plus plain-language summary for any engineer</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows what changed. What it cannot show is <em>why</em> it changed.</p>
+<p>In 2017, every item on the right-hand column was theoretically possible. The physics was known. The mathematics was published. The numerical methods existed. The data was present. What was missing was not knowledge — it was the frictionless path from question to result. Writing a group-delay computation from scratch, debugging the phase unwrapping, computing the IFFT correctly, rendering it legibly, and then deciding to add the PCA and Shift-Fit analysis on top: each step was a discrete project decision, not a natural continuation of a train of thought.</p>
+<blockquote>
+<p><em>The AI partner does not know more RF engineering than the practitioner. What it does is remove the toll booth between curiosity and result. The question ceases to be "is this worth the effort?" and becomes simply "what do I want to know?"</em></p>
+</blockquote>
+<hr>
+<h2 id="on-retained-skill">On Retained Skill </h2>
+<p>There is something worth dwelling on in that initial framing: <em>can I still do this the standard way?</em> The instinct to check — to verify competence against a known baseline — is healthy. The standard S-parameter analysis is the agreed vocabulary of the discipline.</p>
+<p>If you cannot produce the standard outputs, you cannot participate in the standard conversations, and you cannot contextualise the deeper analysis or tell when the AI-assisted computation has produced something physically nonsensical. The fundamental skills are the substrate. The AI partnership is what you build on top of them.</p>
+<p>Retained skill in a rapidly evolving tool landscape is more complex than it first appears. The practitioner who knew MATLAB in 2005 had skills. The practitioner who moved to Python in 2015 retained and extended them. The practitioner who learns to partner productively with AI in 2026 is not replacing skill — they are amplifying it. Domain knowledge remains the only safeguard against physically nonsensical results; the AI removes implementation friction, but it does not supply physical intuition.</p>
+<p>What AI tools make obsolete is not domain expertise. It is the monopoly that implementation friction held over depth of analysis. In 2017, the decision not to compute group delay was often a reasonable resource-allocation choice. In 2026, it is simply a choice to leave information on the table.</p>
+<hr>
+<h2 id="implications-for-rf-engineering-practice">Implications for RF Engineering Practice </h2>
+<p><strong>The S-parameter file is the atomic unit of a much larger analysis.</strong> The Touchstone format encodes complex information that the standard plots only partially surface. Group delay, time-domain behaviour, power budget, and impedance trajectories all live in those same files.</p>
+<p><strong>Standard analysis can no longer be the destination.</strong> While the standard characterisation remains the necessary starting point, it provides zero diagnostic visibility into manufacturing process drifts or physical failure modes. The latent failure in Unit 4 — invisible under standard CW testing, exposed only by the pulse simulation — is the clearest illustration of what remains in the data when the analysis stops at the conventional boundary.</p>
+<p><strong>Communicating to non-specialists has always been the hard problem.</strong> The 2017 deliverable was a report for experts. The 2026 analysis adds an interpretive layer that makes the physics legible to a system architect, a programme manager, or a procurement engineer who does not read Smith charts fluently.</p>
+<p><strong>Production variation is a physics question, not just a statistics question.</strong> The PCA result — that 93.4% of the inter-unit variance in this batch is a single frequency-shift mode — is a statement about the physical mechanism of manufacturing variability. The Shift-Fit Registration result makes it actionable: a 188 MHz calibration spread in cavity resonators, not a statistical abstraction.</p>
+<p><strong>Historical data is more valuable than it appears.</strong> The four .s2p files from 2017 were, from a 2017 perspective, a deliverable. From a 2026 perspective, they are a dataset — and one that was only partially analysed at the time. The analysis that would have taken a week in 2017 may take an afternoon in 2026.</p>
+<hr>
+<h2 id="conclusion-the-data-was-always-waiting">Conclusion: The Data Was Always Waiting </h2>
+<p>Four files. One afternoon. Three stages of analysis.</p>
+<p>Stage 1 confirmed the tick — the standard competency is intact. Stage 2 added the temporal, energetic, and impedance story that the amplitude plots do not tell. Stage 3 went furthest: it solved the inverse problem, extracting the physical architecture of the device from its measured response, simulating real-signal performance, and decomposing eight years of untouched batch variation into a single actionable insight about the dominant manufacturing mode.</p>
+<p>The device under test is, in the end, a well-designed filter. Good insertion loss, excellent lower stopband rejection, and consistent impedance matching. The 500 MHz centre-frequency spread across the batch is the headline finding from 2017, and it remains the headline finding now. What changed is everything around it: understanding that the spread is not a random statistical error but systematic resonator pair detuning (the PC1 mode); knowing that Unit 4's CW pass conceals a −6.53 dB pulse-peak penalty — a latent failure that would only manifest in a wideband pulsed system; and having a precise detuning map, in MHz, that tells a process engineer exactly what to calibrate.</p>
+<p>The bog-standard analysis was the right starting point. It was never supposed to be the ending one. Every S-parameter file is the atomic unit of a much larger story. All data, even that gathered nearly a decade ago, carries untapped intelligence. The information was always there; we simply needed the right partner to help us ask the right questions.</p>
+<hr>
+<p><em>Data: four two-port S-parameter files (Touchstone .s2p format); measured 04 April 2017; 57 MHz–10 GHz; 1,530 points per unit; client and project details withheld; all derived quantities computed from original measurement data without additional measurements or calibration.</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
