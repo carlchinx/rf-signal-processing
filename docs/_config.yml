@@ -11,6 +11,10 @@ defaults:
     values:
       image: true
   - scope:
+      path: "assets/audio"
+    values:
+      audio: true
+  - scope:
       path: "assets/infographx"
     values:
       image: true
