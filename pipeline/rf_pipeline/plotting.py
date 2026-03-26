@@ -13,20 +13,18 @@ produce a single file rather than a multi-page PDF (to stay composable).
 from __future__ import annotations
 
 import math
-from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize as _MplNormalize  # noqa: N813
-
 import numpy as np
 import pandas as pd
+from matplotlib.colors import Normalize as _MplNormalize  # noqa: N813
 
 from .config import GNGState, S2PBundle, VectorFitState, VoronoiArtifacts
-
 
 # ---------------------------------------------------------------------------
 # Bayesian credible-band and PPC plots

@@ -23,6 +23,14 @@ try:
 except Exception:
     yaml = None  # type: ignore[assignment]
 
+from .bayes import (
+    build_hdi_scalar_summary,
+    compute_ph_distance_posterior_hdi,
+    compute_ph_draws_for_unit,
+    compute_pointwise_hdi,
+    compute_td_credible_bands,
+    run_bayesian_inference,
+)
 from .config import (
     AEConfig,
     BayesConfig,
@@ -35,11 +43,11 @@ from .config import (
     TDAConfig,
     TDConfig,
     TopologyDescriptor,
-    VFConfig,
     VectorFitState,
+    VFConfig,
 )
-from .io import load_s2p
 from .interpolation import build_common_grid, interpolate_bundle
+from .io import load_s2p
 from .metrics import (
     choose_scalar_series,
     extract_trace,
@@ -48,29 +56,7 @@ from .metrics import (
     reciprocity_error,
     robust_group_delay,
 )
-from .time_domain import time_domain_from_trace
-from .topology import (
-    PH_AVAILABLE as _PH_AVAILABLE,
-    choose_lag_autocorr,
-    build_complex_topology_cloud,
-    build_shift_topology_cloud,
-    build_topology_descriptor,
-    compare_topology_features,
-    compute_ph_diagrams,
-    compute_ph_distance_matrix,
-    make_tda_feature_vector,
-)
-from .vector_fit import build_inverse_dataset, fit_vector_model
 from .ml import get_torch_device, set_seed, train_autoencoder, train_inverse_model
-from .bayes import (
-    build_hdi_scalar_summary,
-    compute_ph_distance_posterior_hdi,
-    compute_ph_draws_for_unit,
-    compute_pointwise_hdi,
-    compute_scalar_hdi_string,
-    compute_td_credible_bands,
-    run_bayesian_inference,
-)
 from .plotting import (
     _compute_voxel_sv,
     save_3d_voxel_heatmap,
@@ -97,7 +83,21 @@ from .plotting import (
     save_topomap_unit_vs_freq,
     save_voronoi_plot,
 )
-
+from .time_domain import time_domain_from_trace
+from .topology import (
+    PH_AVAILABLE as _PH_AVAILABLE,
+)
+from .topology import (
+    build_complex_topology_cloud,
+    build_shift_topology_cloud,
+    build_topology_descriptor,
+    choose_lag_autocorr,
+    compare_topology_features,
+    compute_ph_diagrams,
+    compute_ph_distance_matrix,
+    make_tda_feature_vector,
+)
+from .vector_fit import build_inverse_dataset, fit_vector_model
 
 # ---------------------------------------------------------------------------
 # Integrity helpers

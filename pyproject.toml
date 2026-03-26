@@ -55,11 +55,13 @@ line-length = 100
 select = ["E", "F", "W", "I", "UP"]
 ignore = [
     "E501",   # line too long — enforced at 100 but not an error in long scientific expressions
+    "E702",   # multiple statements on one line (semicolons) — deliberate compact style
     "E741",   # ambiguous variable names (l, O, I) — common in signal-processing maths
 ]
 
 [tool.ruff.lint.per-file-ignores]
 "pipeline/s2p_tda_rtx4070.py" = ["F401", "E402"]
+"pipeline/synthetic_data/compare_models.py" = ["E402"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

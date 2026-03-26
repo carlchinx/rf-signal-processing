@@ -13,6 +13,7 @@ import warnings
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.colors as mcolors
 import matplotlib.gridspec as gridspec
@@ -1326,7 +1327,6 @@ def fig16(vfp, m):
                 H_grid = np.zeros_like(S_grid, dtype=complex)
             else:
                 # Build full surface: for sigma != 0 use analytic continuation
-                keys = list(npz.keys())
                 poles    = npz["poles"]
                 residues = npz["residues"]
                 const    = npz.get("constants",    npz.get("constant_coefficients",    None))

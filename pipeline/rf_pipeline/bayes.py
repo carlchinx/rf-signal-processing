@@ -23,19 +23,18 @@ from scipy.signal import savgol_filter
 from scipy.spatial.distance import cdist
 
 try:
-    from ripser import ripser as _ripser_fn
     from persim import bottleneck as _persim_bottleneck
+    from ripser import ripser as _ripser_fn
     _PH_AVAILABLE: bool = True
 except Exception:
     _ripser_fn = None  # type: ignore[assignment]
     _persim_bottleneck = None  # type: ignore[assignment]
     _PH_AVAILABLE = False
 
-from .config import BayesConfig, BayesResult, TDAConfig, TDConfig, TRACE_TO_INDEX
+from .config import TRACE_TO_INDEX, BayesConfig, BayesResult, TDAConfig, TDConfig
 from .metrics import mag_db, robust_group_delay
 from .time_domain import time_domain_from_trace
-from .topology import subsample_point_cloud, _normalize_columns
-
+from .topology import _normalize_columns, subsample_point_cloud
 
 # ---------------------------------------------------------------------------
 # HDI utilities
@@ -79,7 +78,7 @@ def _estimate_noise_sigma(
 # ---------------------------------------------------------------------------
 
 def run_bayesian_inference(
-    bundle: "S2PBundle",  # noqa: F821 — imported in runner, not needed here
+    bundle: S2PBundle,  # noqa: F821 — imported in runner, not needed here
     cfg: BayesConfig,
     rng: np.random.Generator,
 ) -> BayesResult:

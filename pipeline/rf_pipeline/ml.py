@@ -30,15 +30,14 @@ except Exception:
     _TORCH_AVAILABLE = False
 
 try:
-    from sklearn.preprocessing import StandardScaler
     from sklearn.decomposition import PCA
+    from sklearn.preprocessing import StandardScaler
 except Exception:
     StandardScaler = None  # type: ignore[assignment,misc]
     PCA = None  # type: ignore[assignment]
 
 from .config import AEConfig, InverseConfig, InverseModelInfo
 from .metrics import build_window_feature_matrix
-
 
 # ---------------------------------------------------------------------------
 # Device helpers
@@ -51,7 +50,7 @@ def get_torch_device() -> str:
     return "cuda" if torch.cuda.is_available() else "cpu"
 
 
-def maybe_compile(model: "nn.Module", enabled: bool) -> "nn.Module":  # type: ignore[name-defined]
+def maybe_compile(model: nn.Module, enabled: bool) -> nn.Module:  # type: ignore[name-defined]
     """Optionally apply ``torch.compile`` (requires PyTorch ≥ 2.0)."""
     if not _TORCH_AVAILABLE or not enabled:
         return model
@@ -140,13 +139,13 @@ class WindowAutoencoder(nn.Module):  # type: ignore[misc]
             nn.Linear(hidden_dim, flat),
         )
 
-    def forward(self, x: "torch.Tensor") -> "tuple[torch.Tensor, torch.Tensor]":
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         z = self.encoder(x)
         y = self.decoder(z).view(x.shape)
         return y, z
 
     @torch.no_grad()  # type: ignore[misc]
-    def encode_windows(self, x: "torch.Tensor") -> "torch.Tensor":
+    def encode_windows(self, x: torch.Tensor) -> torch.Tensor:
         return self.encoder(x)
 
 
@@ -165,7 +164,7 @@ class MLPRegressorTorch(nn.Module):  # type: ignore[misc]
             nn.Linear(hidden_dim, out_dim),
         )
 
-    def forward(self, x: "torch.Tensor") -> "torch.Tensor":
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.net(x)
 
 

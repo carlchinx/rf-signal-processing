@@ -85,8 +85,8 @@ ANALYSIS_ML_DIR = PIPELINE_DIR / "outputs" / "s2p_tda_rtx4070" / "ml"  # read-on
 log = logging.getLogger(__name__)
 
 # ── Shared S2P utilities (from utils.py) ─────────────────────────────────────
-from utils import parse_s2p, write_s2p  # noqa: E402
 from utils import extract_rf_features as extract_features  # noqa: E402
+from utils import parse_s2p, write_s2p  # noqa: E402
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────

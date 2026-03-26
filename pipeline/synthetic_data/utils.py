@@ -47,7 +47,7 @@ def parse_s2p(path: Path) -> tuple[np.ndarray, np.ndarray]:
     """
     freq: list[float] = []
     rows: list[list[complex]] = []
-    with open(path, "r", encoding="utf-8", errors="replace") as fh:
+    with open(path, encoding="utf-8", errors="replace") as fh:
         for line in fh:
             line = line.strip()
             if not line or line.startswith("!") or line.startswith("#"):

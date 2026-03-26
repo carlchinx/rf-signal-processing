@@ -29,20 +29,20 @@ except ImportError:
     _VF = rf.VectorFitting
 
 try:
-    from sklearn.preprocessing import StandardScaler
     from sklearn.decomposition import PCA
+    from sklearn.preprocessing import StandardScaler
 except Exception:
     StandardScaler = None  # type: ignore[assignment,misc]
     PCA = None  # type: ignore[assignment]
 
 from .config import (
+    ROW_MAJOR_TRACE_ORDER,
     InverseConfig,
     InverseMeta,
-    ROW_MAJOR_TRACE_ORDER,
     S2PBundle,
     TDAConfig,
-    VFConfig,
     VectorFitState,
+    VFConfig,
 )
 from .metrics import (
     choose_scalar_series,
@@ -53,10 +53,11 @@ from .topology import (
     build_complex_topology_cloud,
     build_shift_topology_cloud,
     build_topology_descriptor,
-    choose_lag_autocorr as _cla,
     make_tda_feature_vector,
 )
-
+from .topology import (
+    choose_lag_autocorr as _cla,
+)
 
 # ---------------------------------------------------------------------------
 # Vector model fitting

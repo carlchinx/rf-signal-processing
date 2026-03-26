@@ -29,8 +29,8 @@ Usage:
 """
 
 import argparse
-import sys
 import logging
+import sys
 import warnings
 from pathlib import Path
 
@@ -40,18 +40,27 @@ if hasattr(sys.stdout, "reconfigure"):
 
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from sklearn.base import clone
+from sklearn.ensemble import (
+    GradientBoostingClassifier,
+    GradientBoostingRegressor,
+    RandomForestClassifier,
+    RandomForestRegressor,
+)
 from sklearn.gaussian_process import GaussianProcessClassifier, GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF, WhiteKernel
 from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.metrics import (
-    accuracy_score, brier_score_loss, f1_score, mean_absolute_error,
-    mean_squared_error, r2_score, roc_auc_score,
+    accuracy_score,
+    brier_score_loss,
+    f1_score,
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score,
+    roc_auc_score,
 )
 from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
-from sklearn.base import clone
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC, SVR, LinearSVC, LinearSVR
@@ -59,6 +68,7 @@ from sklearn.svm import SVC, SVR, LinearSVC, LinearSVR
 warnings.filterwarnings("ignore")
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -108,8 +118,8 @@ Known findings from the s2p_tda_rtx4070 pipeline:
 # Real-unit feature helpers — delegated to utils.py to avoid duplication
 # ─────────────────────────────────────────────────────────────────────────────
 sys.path.insert(0, str(SCRIPT_DIR))  # ensure utils.py (same directory) is importable
-from utils import parse_s2p as _parse_s2p          # noqa: E402
 from utils import extract_rf_features as _extract_rf_features  # noqa: E402
+from utils import parse_s2p as _parse_s2p  # noqa: E402
 
 
 def load_real_unit_features() -> pd.DataFrame:
@@ -542,7 +552,7 @@ def _interpret(binary: pd.DataFrame, fourclass: pd.DataFrame,
     # Task 1 — binary cluster discrimination
     b_rank = layer_rank(binary, "f1_macro")
     top_m  = best_model(binary, "f1_macro", b_rank[0])
-    log.info(f"[Task 1 — Binary Cluster]")
+    log.info("[Task 1 — Binary Cluster]")
     log.info(f"  Feature layer ranking (F1): {' > '.join(b_rank)}")
     log.info(f"  Best: {top_m} on '{b_rank[0]}' layer")
     if b_rank[0] == "rf":
@@ -564,7 +574,7 @@ def _interpret(binary: pd.DataFrame, fourclass: pd.DataFrame,
     # Task 2 — 4-class unit identification
     fc_rank = layer_rank(fourclass, "f1_macro")
     top_m2  = best_model(fourclass, "f1_macro", fc_rank[0])
-    log.info(f"\n[Task 2 — 4-class Dominant Unit]")
+    log.info("\n[Task 2 — 4-class Dominant Unit]")
     log.info(f"  Feature layer ranking (F1): {' > '.join(fc_rank)}")
     log.info(f"  Best: {top_m2} on '{fc_rank[0]}' layer")
     tda_f1 = fourclass[fourclass["feature_layer"] == "tda"]["f1_macro"].mean()
@@ -574,13 +584,13 @@ def _interpret(binary: pd.DataFrame, fourclass: pd.DataFrame,
               "variation (GNG/PH distances confirm 4-way structure).")
     upper = 1.0 / 4 + 0.05
     if fourclass["f1_macro"].max() < upper + 0.30:
-        log.info(f"  ℹ  Inherently hard: dominant unit is a soft argmax label; "
+        log.info("  ℹ  Inherently hard: dominant unit is a soft argmax label; "
               "Dirichlet α=2 spreads probability mass → boundary ambiguity.")
 
     # Task 3 — regression
     r_rank = layer_rank(reg, "r2")
     top_m3 = best_model(reg, "r2", r_rank[0])
-    log.info(f"\n[Task 3 — s21_max_db Regression]")
+    log.info("\n[Task 3 — s21_max_db Regression]")
     log.info(f"  Feature layer ranking (R²): {' > '.join(r_rank)}")
     log.info(f"  Best: {top_m3} on '{r_rank[0]}' layer")
     rf_r2  = reg[reg["feature_layer"] == "rf"]["r2"].mean()
@@ -771,7 +781,7 @@ def _generate_plots(
             ax.scatter(t, p,
                        color=model_color[m], s=30, alpha=0.85, zorder=3,
                        marker="*" if m == best_m else "o",
-                       label=f"{m}{'  \u2605best' if m == best_m else ''}")
+                       label=f"{m}{'  ★best' if m == best_m else ''}")
         mn = min(min(all_true), min(all_pred))
         mx = max(max(all_true), max(all_pred))
         pad = (mx - mn) * 0.10
@@ -1008,7 +1018,7 @@ def _generate_plots(
             ax.scatter(t, p,
                        color=model_color[m], s=30, alpha=0.85, zorder=3,
                        marker="*" if m == best_m else "o",
-                       label=f"{m}{'  \u2605best' if m == best_m else ''}")
+                       label=f"{m}{'  ★best' if m == best_m else ''}")
         mn = min(min(all_true), min(all_pred))
         mx = max(max(all_true), max(all_pred))
         pad = (mx - mn) * 0.10

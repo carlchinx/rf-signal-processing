@@ -30,7 +30,6 @@ from .config import (
     PHResult,
     S2PBundle,
     TDAConfig,
-    TRACE_TO_INDEX,
     TopologyDescriptor,
     VoronoiArtifacts,
 )
@@ -40,8 +39,9 @@ from .metrics import extract_trace
 # Optional persistent-homology dependencies
 # ---------------------------------------------------------------------------
 try:
+    from persim import bottleneck as _persim_bottleneck  # noqa: F401
+    from persim import wasserstein as _persim_wasserstein
     from ripser import ripser as _ripser_fn
-    from persim import bottleneck as _persim_bottleneck, wasserstein as _persim_wasserstein  # noqa: F401
     PH_AVAILABLE: bool = True
 except Exception:
     _ripser_fn = None  # type: ignore[assignment]
@@ -590,7 +590,6 @@ def build_gng_transition_artifacts(
     freq_hz: np.ndarray,
     state: GNGState,
 ) -> tuple[dict[str, float], dict]:
-    from .config import GNGTransitionArtifacts  # local import avoids rexporting
     n_nodes = len(state.nodes)
     if n_nodes == 0 or len(cloud) == 0:
         empty_assign = pd.DataFrame(columns=["source_index", "freq_hz", "node_id"])
