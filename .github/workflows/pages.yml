@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - index.html
       - docs/**
       - _config.yml
       - _layouts/**
