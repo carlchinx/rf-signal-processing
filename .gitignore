@@ -46,10 +46,6 @@ pipeline/data/*.s2p
 .DS_Store
 Thumbs.db
 
-# ── HTML outputs ──────────────────────────────────────────────────────────────
-**/*.html
-!docs/**/*.html
-
 # ── Test and coverage ──────────────────────────────────────────────────────────
 .pytest_cache/
 .coverage
