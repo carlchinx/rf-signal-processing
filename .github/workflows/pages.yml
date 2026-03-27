@@ -10,6 +10,7 @@ on:
       - _layouts/**
       - pipeline/outputs/s2p_tda_rtx4070/plots/report/**
       - .github/workflows/pages.yml
+      - LICENSE
   workflow_dispatch:
 
 permissions:

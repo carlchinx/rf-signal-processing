@@ -7,12 +7,28 @@ plugins:
 
 exclude:
   - .venv/
+  - .github/
   - pipeline/data/
-  - pipeline/synthetic_data/results/s2p/
-  - "*.pt"
-  - "*.pth"
-  - "*.npy"
-  - "*.npz"
+  - pipeline/rf_pipeline/
+  - pipeline/synthetic_data/
+  - pipeline/__pycache__/
+  - pipeline/s2p_tda_rtx4070.py
+  - pipeline/visualize_pipeline.py
+  - pipeline/config.yaml
+  - pipeline/README.md
+  - pipeline/requirements.txt
+  - pipeline/outputs/s2p_tda_rtx4070/bayes/
+  - pipeline/outputs/s2p_tda_rtx4070/metrics/
+  - pipeline/outputs/s2p_tda_rtx4070/ml/
+  - pipeline/outputs/s2p_tda_rtx4070/ph/
+  - pipeline/outputs/s2p_tda_rtx4070/tda/
+  - pipeline/outputs/s2p_tda_rtx4070/time_domain/
+  - pipeline/outputs/s2p_tda_rtx4070/vector_fit/
+  - pipeline/outputs/s2p_tda_rtx4070/*.csv
+  - pipeline/outputs/s2p_tda_rtx4070/*.json
+  - pyproject.toml
+  - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
 
