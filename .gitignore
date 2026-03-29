@@ -60,3 +60,5 @@ htmlcov/
 .env
 .env.*
 *.key
+.claude/skills/
+.github/skills/
